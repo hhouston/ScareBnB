@@ -10,7 +10,7 @@ MVP
 
 ## Design Docs
 * [View Wireframes](wireframes.md)
-* [Components Hierarchy]components-hierarchy.md)
-* [API endpoints]api-endpoints.md)
-* [DB schema]db-schema.md)
+* [Components Hierarchy](components-hierarchy.md)
+* [API endpoints](api-endpoints.md)
+* [DB schema](db-schema.md)
 * [Sample State](sample-state.md)
