@@ -17,7 +17,7 @@ ScareBnB allows users to host or book haunted locations around the world. This w
 - [ ] Production README
 
 ## Design Docs
-* [View Wireframes](wireframes.md)
+* [View Wireframes](wireframes)
 * [Components Hierarchy](components-hierarchy.md)
 * [API endpoints](api-endpoints.md)
 * [DB schema](db-schema.md)

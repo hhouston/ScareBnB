@@ -17,7 +17,7 @@ ScareBnB allows users to host or book haunted locations around the world. This w
 - [ ] Production README
 
 ## Design Docs
-* [View Wireframes](wireframes.md)
+* [View Wireframes](wireframes)
 * [Components Hierarchy](components-hierarchy.md)
 * [API endpoints](api-endpoints.md)
 * [DB schema](db-schema.md)
@@ -41,11 +41,11 @@ ScareBnB allows users to host or book haunted locations around the world. This w
 
 **Objective:** Bookings belong to spots and users and can be created, read, and destroyed. Spot search results account for existing bookings.
 
-### Phase 5: Reviews model (1 day)
+### Phase V: Reviews model (1 day)
 
 **Objective:** Users can leave reviews and rate spots. Reviews and ratings appear on spot detail page and can be created, read, updated, and destroyed.
 
-### Phase 6: Profile
+### Phase VI: Profile
 
 **Objective:** Profile page where user can view their profile.
 
