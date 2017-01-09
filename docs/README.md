@@ -1,67 +1,60 @@
-# TreeTopBnB
+#ScareBnB
 
-[heroku link][heroku]
-[Trello link][trello]
+[Heroku Link](https://scarebnb-aa.herokuapp.com/)
 
-[trello]: https://trello.com/b/Rw7FxNOD/treetopbnb
-[heroku]: https://treetopbnb.herokuapp.com/#/
+[Trello Link](https://trello.com/)
 
 ## Minimum Viable Product
 
-TreeTop BnB connects you to the world of stunning treetop architecture. It is a web application, inspired by Airbnb, and built using Ruby on Rails and React/Redux. By the end of Week 9, TreeTopBnB, will have all of the following functionality:
+ScareBnB allows users to host or book haunted locations around the world. This website is a mobile first web application using Ruby on Rails for the backend with a Postgres DB. The frontend is built using ReactJS and JQuery.
 
 - [ ] Hosting on Heroku
-- [ ] New account creation, login, and guest/demo login
-- [ ] Spots
+- [ ] Create new accounts and login
+- [ ] Places
 - [ ] Bookings
-- [ ] Spots search (by location & availability) & Google Maps on search
+- [ ] Search (by Location & Availability) with Google Maps
 - [ ] Reviews
 - [ ] Production README
 
-Each of these features will include smooth, bug-free navigation, necessary seed data to display the feature, and polished CSS styling.
-
 ## Design Docs
-* [View Wireframes][wireframes]
-* [React Components][components]
-* [API endpoints][api-endpoints]
-* [DB schema][schema]
-* [Sample State][sample-state]
-
-[wireframes]: ./wireframes/
-[components]: component-hierarchy.md
-[sample-state]: sample-state.md
-[api-endpoints]: api-endpoints.md
-[schema]: schema.md
+* [View Wireframes](wireframes.md)
+* [Components Hierarchy](components-hierarchy.md)
+* [API endpoints](api-endpoints.md)
+* [DB schema](db-schema.md)
+* [Sample State](sample-state.md)
 
 ## Implementation Timeline
 
-### Phase I: New account creation/login and homepage (2 days)
+### Phase I: Auth & Create Account (2 days)
 
-**Objective:** Functioning homepage with working log in and sign up modals
+**Objective:** Sign Up and Log In overlays on Home page.
 
-### Phase II: Spot model and featured spots (1 day)
+### Phase II: Home Page with Content (2 days)
 
-**Objective:** Featured spots are listed on the homepage with active links to spot detail pages.
+**Objective:** Featured places and experiences are displayed on the home page and link to a detailed view of that place.
 
-### Phase III: Spot search page with google map and homepage search bar (2 days)
+### Phase III: Search page with google maps (2 days)
 
-**Objective:** Functioning search bar on homepage that links to search page. Search page lists spots that actively filter by search params.
-Interactive Google map mirrors search results.
+**Objective:** Search page will search places by location and availability and return a list of places to be displayed on the page. Link to search displayed on home page.
 
-### Phase IV: Bookings model (1 day)
+### Phase IV: Bookings Page (1 day)
 
-**Objective:** Bookings belong to spots and users and can be created, read, and destroyed. Spot search results account for exsiting bookings.
+**Objective:** Bookings belong to spots and users and can be created, read, and destroyed. Spot search results account for existing bookings.
 
 ### Phase 5: Reviews model (1 day)
 
 **Objective:** Users can leave reviews and rate spots. Reviews and ratings appear on spot detail page and can be created, read, updated, and destroyed.
 
-### Bonus Features (TBD)
+### Phase 6: Profile
 
-### Phase 6: User dashboard
+**Objective:** Profile page where user can view their profile.
 
-**Objective:** Users have a dashboard with detailed profile
+### Bonus Features
 
 ### Phase 7: Users can list spots
 
-**Objective:** Users can become hosts and add listed spots from their dashboard. Spots can be created, read, updated, and destroyed.
+**Objective:** Create page for users to create and host places to rent out.
+
+### Phase 8: Message
+
+**Objective:** Allow users to message each other through the website.
