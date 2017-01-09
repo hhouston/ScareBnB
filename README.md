@@ -2,7 +2,7 @@
 
 [Heroku Link](https://scarebnb-aa.herokuapp.com/)
 
-[Trello Link](https://trello.com/)
+[Trello Link](https://trello.com/b/gsUUCsuR/scarebnb)
 
 ## Minimum Viable Product
 
