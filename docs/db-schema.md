@@ -16,6 +16,8 @@ id          | integer   | not null, primary key, indexed
 host_id     | integer   | not null, foreign key: users, indexed
 name        | string    | not null
 location    | float     | not null
+price       | float     | not null
+rating      | float     |
 lat         | float     |
 long        | string    |
 image_url   | string    | default
@@ -27,14 +29,16 @@ column name | data type | details
 id          | integer   | not null, primary key
 place_id    | integer   | not null, foreign key: places, indexed
 guest_id    | integer   | not null, foreign key: users, indexed
-start_date  | string    | not null
-end_date    | string    | not null
+start_date  | date    | not null
+end_date    | date    | not null
+image_url   | string    |
 
 ## reviews
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 author_id   | integer   | not null, foreign key: users, indexed
+fname       | string    | not null
 place_id    | integer   | not null, foreign key: places, indexed
 ratings     | float     | not null
 review      | text      | not null
