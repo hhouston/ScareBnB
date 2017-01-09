@@ -53,3 +53,4 @@ ScareBnB allows users to host or book haunted locations around the world. This w
 
 - [ ] Hosting
 - [ ] Messaging
+- [ ] Email auth
