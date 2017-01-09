@@ -2,7 +2,7 @@
 
 [Heroku Link](https://scarebnb-aa.herokuapp.com/)
 
-[Trello Link](https://trello.com/)
+[Trello Link](https://trello.com/b/gsUUCsuR/scarebnb)
 
 ## Minimum Viable Product
 
@@ -41,20 +41,15 @@ ScareBnB allows users to host or book haunted locations around the world. This w
 
 **Objective:** Bookings belong to spots and users and can be created, read, and destroyed. Spot search results account for existing bookings.
 
-### Phase 5: Reviews model (1 day)
+### Phase V: Reviews model (1 day)
 
 **Objective:** Users can leave reviews and rate spots. Reviews and ratings appear on spot detail page and can be created, read, updated, and destroyed.
 
-### Phase 6: Profile
+### Phase VI: Profile
 
 **Objective:** Profile page where user can view their profile.
 
 ### Bonus Features
 
-### Phase 7: Users can list spots
-
-**Objective:** Create page for users to create and host places to rent out.
-
-### Phase 8: Message
-
-**Objective:** Allow users to message each other through the website.
+- [ ] Hosting
+- [ ] Messaging
