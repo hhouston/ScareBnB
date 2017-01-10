@@ -1,4 +1,5 @@
-import { merge } from 'lodash';
+import { merge } from 'lodash/merge';
+
 
 const sessionReducer = (state, action) => {
   Object.freeze(state);
