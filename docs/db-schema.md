@@ -15,11 +15,11 @@ column name | data type | details
 id          | integer   | not null, primary key, indexed
 host_id     | integer   | not null, foreign key: users, indexed
 name        | string    | not null
-location    | float     | not null
+location    | string     | not null
 price       | float     | not null
-rating      | float     |
+rating      | integer     |
 lat         | float     |
-long        | string    |
+long        | float     |
 image_url   | string    | default
 info        | string    | not null
 
@@ -38,7 +38,6 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 author_id   | integer   | not null, foreign key: users, indexed
-fname       | string    | not null
 place_id    | integer   | not null, foreign key: places, indexed
 ratings     | float     | not null
 review      | text      | not null

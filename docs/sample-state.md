@@ -73,6 +73,15 @@
       end_date: "2013-04-23T18:25:43.511Z"
     }
   },
+  reviews: {
+    1: {
+      id: 1,
+      author_id: 2,
+      rating: 4,
+      review: "text of the review",
+      fname: "sam"
+    }
+  }
   profile: {
     fname: "hunter",
     lname: "houston",

@@ -10,7 +10,6 @@
 
 - `GET /users/new`
 - `POST /users`
-- `PATCH /users`
 
 ### Session
 

@@ -52,8 +52,9 @@
 Path   | Component   
 -------|-------------
 "/" | "HeaderContainer"
-"/home" | "HomeContainer"
+"/" | "HomeContainer"
 "/search" | "SearchContainer"
 "/places/:placeId" | "PlaceContainer"
-"/bookings" | "BookingsContainer"
+"/places/:placeId/bookings" | "BookingsContainer"
+"/users/:userId/bookings" | "BookingsContainer"
 "/users/:userId" | "UserContainer"
