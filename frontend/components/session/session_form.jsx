@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Modal from 'react-bootstrap/lib/Modal';
+import Button from 'react-bootstrap/lib/Button';
 
 class SessionForm extends React.Component {
   constructor(props){
@@ -7,14 +9,28 @@ class SessionForm extends React.Component {
 
     this.state = {
       email: "",
-      password: ""
+      password: "",
+      showModal: false
     };
+
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+
   }
 
   componentDidUpdate() {
     this.redirectIfLoggedIn();
   }
+
+  closeModal() {
+    this.setState({ showModal: false });
+  }
+
+  openModal() {
+    this.setState({ showModal: true });
+  }
+
 
   redirectIfLoggedIn() {
     if (this.props.loggedIn) {
@@ -56,31 +72,41 @@ class SessionForm extends React.Component {
   render() {
     return (
       <div className="login-form-container">
-				<form onSubmit={this.handleSubmit} className="login-form-box">
-					Welcome to Scare BnB!
-					<br/>
-					Please {this.props.formType} or {this.navLink()}
-					{this.renderErrors()}
-					<div className="login-form">
-						<br/>
-						<label> Email:
-							<input type="text"
-								value={this.state.email}
-								onChange={this.update("email")}
-								className="login-input" />
-						</label>
-						<br/>
-						<label> Password:
-							<input type="password"
-								value={this.state.password}
-								onChange={this.update("password")}
-								className="login-input" />
-						</label>
-						<br/>
-						<input type="submit" value="Submit" />
-					</div>
-				</form>
-			</div>
+        <Button
+          bsStyle="primary"
+          bsSize="large"
+          onClick={this.openModal}
+        >
+          Test Modal
+        </Button>
+
+        <Modal show={this.state.showModal} onHide={this.closeModal}>
+  				<form onSubmit={this.handleSubmit} className="login-form-box">
+  					Welcome to Scare BnB!
+  					<br/>
+  					Please {this.props.formType} or {this.navLink()}
+  					{this.renderErrors()}
+  					<div className="login-form">
+  						<br/>
+  						<label> Email:
+  							<input type="text"
+  								value={this.state.email}
+  								onChange={this.update("email")}
+  								className="login-input" />
+  						</label>
+  						<br/>
+  						<label> Password:
+  							<input type="password"
+  								value={this.state.password}
+  								onChange={this.update("password")}
+  								className="login-input" />
+  						</label>
+  						<br/>
+  						<input type="submit" value="Submit" />
+  					</div>
+  				</form>
+        </Modal>
+  		</div>
     );
   }
 }
