@@ -30,7 +30,8 @@
 ### Bookings
 
 - `GET /api/places/:id/bookings`
-- `POST /api/users/:id/bookings`
+- `GET /api/users/:id/bookings`
+- `POST /api/places/:id/bookings`
 - `DELETE /api/users/:id/bookings/:id`
 
 ### Reviews

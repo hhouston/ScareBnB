@@ -3,11 +3,8 @@
 **HeaderContainer**
  - Header
   * HeaderLoggedIn
-    * LogInModal
-      - SessionFormContainer
-        * SessionForm
-          - SessionLogin
-          - SessionSignUp
+    * WelcomeContainer
+      - LogOut Button
   * HeaderLoggedOut
     * LogInModal
       - SessionFormContainer
@@ -44,6 +41,7 @@
   * UserProfile
   * PlaceFormContainer
     - PlaceForm
+  * BookingsContainer
 
 
 
@@ -51,7 +49,6 @@
 
 Path   | Component   
 -------|-------------
-"/" | "HeaderContainer"
 "/" | "HomeContainer"
 "/search" | "SearchContainer"
 "/places/:placeId" | "PlaceContainer"
