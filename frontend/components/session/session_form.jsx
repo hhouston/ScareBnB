@@ -21,6 +21,7 @@ class SessionForm extends React.Component {
     this.closeLoginModal = this.closeLoginModal.bind(this);
     this.openSignUpModal = this.openSignUpModal.bind(this);
     this.closeSignUpModal = this.closeSignUpModal.bind(this);
+    this.toggleModal = this.toggleModal.bind(this);
   }
 
   componentDidUpdate() {
@@ -41,6 +42,15 @@ class SessionForm extends React.Component {
 
   openSignUpModal() {
     this.setState({ showSignUpModal: true });
+  }
+
+  toggleModal() {
+    if (this.state.showLoginModal === true) {
+      this.setState({ showLoginModal: false });
+      this.setState({ showSignUp: true });
+    } else {
+      this.setState({ showSignUp: false });    }
+      this.setState({ showLoginModal: true });
   }
 
 
@@ -114,27 +124,29 @@ class SessionForm extends React.Component {
                     <input type="submit" value="Submit" />
                   </div>
                 </form>
-                <p>Don't have an account? {this.navLink()}</p>
+                <p>Don't have an account? {}</p>
             </Modal>;
     } else {
-      modal = <Modal className="modal" show={this.state.showSignUpModal} onHide={this.closeSignUpModal}>
+      modal = <Modal className="modal container-fluid" show={this.state.showSignUpModal} onHide={this.closeSignUpModal}>
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                   <h2>Sign Up</h2>
                   {this.renderErrors()}
-                  <div className="login-form">
+                  <div className="signup-form">
                     <br/>
-                    <span className="fname"> First Name:
-                      <input type="text"
-                        value={this.state.fname}
-                        onChange={this.update("fname")}
-                        className="login-input" />
-                    </span>
-                    <span className="lname"> Last Name:
-                      <input type="text"
-                        value={this.state.lname}
-                        onChange={this.update("lname")}
-                        className="login-input" />
-                    </span>
+                      <div className="row signup-name">
+                        <span className="col-xs-12 col-sm-12 col-md-6 col-lg-6 fname"> First Name:
+                          <input type="text"
+                            value={this.state.fname}
+                            onChange={this.update("fname")}
+                            className="login-input" />
+                        </span>
+                        <span className="col-xs-12 col-sm-12 col-md-6 col-lg-6 lname"> Last Name:
+                          <input type="text"
+                            value={this.state.lname}
+                            onChange={this.update("lname")}
+                            className="login-input" />
+                        </span>
+                      </div>
                     <label> Email:
                       <input type="text"
                         value={this.state.email}
@@ -152,7 +164,7 @@ class SessionForm extends React.Component {
                     <input type="submit" value="Submit" />
                   </div>
                 </form>
-                <p>Already have an account? {this.navLink()}</p>
+                <p>Already have an account? {}</p>
             </Modal>;
     }
     return (

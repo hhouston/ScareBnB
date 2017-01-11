@@ -5,7 +5,6 @@ import SessionFormContainer from '../session/session_form_container';
 // &nbsp;
 // <Link to="/signup" activeClassName="current">Sign up!</Link>
 
-let navbar = <nav className="navbar"></nav>;
 
 const loggedOut = () => (
   <nav className="login-signup">
@@ -20,8 +19,9 @@ const loggedIn = (currentUser, logout) => (
 	</hgroup>
 );
 
-const Greeting = ({ currentUser, logout }) => (
-  currentUser ? loggedIn(currentUser, logout) : loggedOut()
-);
+const Greeting = ({ currentUser, logout }) => {
+  const navbar = currentUser ? loggedIn(currentUser, logout) : loggedOut();
+  return <nav className="navbar">{navbar}</nav>;
+};
 
 export default Greeting;
