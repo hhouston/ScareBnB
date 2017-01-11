@@ -7,16 +7,15 @@ const mapStateToProps = (state, ownProps) => ({
     errors: state.session.errors
 });
 
+// login: (user) => dispatch(login(user)),
+// logout: (user) => dispatch(logout(user)),
+const mapDispatchToProps = (dispatch, ownProps) => ({
 
-const mapDispatchToProps = (dispatch, ownProps) => {
-  const formType = ownProps.location.pathname.slice(1);
-  const processForm = (formType === 'login') ? login : signup;
+    login: (user) => dispatch(login(user)),
+    signup: (user) => dispatch(signup(user))
 
-  return {
-    processForm: (user) => dispatch(processForm(user)),
-    formType
-  };
-};
+});
+
 
 export default connect(
   mapStateToProps,
