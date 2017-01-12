@@ -7,6 +7,6 @@
 
 * Landing page
 * Avatar/profile button on navbar
-* Colors: ...
+* Colors: ghost-white#F8F8FF
 * Demo user
 * Login and Sign Up separate buttons into <li>

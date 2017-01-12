@@ -1,10 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
 import SessionFormContainer from '../session/session_form_container';
-// <Link to="/login" activeClassName="current">Login</Link>
-// &nbsp;
-// <Link to="/signup" activeClassName="current">Sign up!</Link>
-
 
 const loggedOut = () => (
   <div className="login-signup">
@@ -19,7 +15,7 @@ const loggedIn = (currentUser, logout) => (
 	</hgroup>
 );
 
-const Greeting = ({ currentUser, logout }) => {
+const Navbar = ({ currentUser, logout }) => {
   const navbar = currentUser ? loggedIn(currentUser, logout) : loggedOut();
   return (
     <div>
@@ -28,4 +24,4 @@ const Greeting = ({ currentUser, logout }) => {
   );
 };
 
-export default Greeting;
+export default Navbar;
