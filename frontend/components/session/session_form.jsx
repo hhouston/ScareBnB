@@ -33,6 +33,10 @@ class SessionForm extends React.Component {
   }
 
   openLoginModal() {
+    if (this.state.showSignUpModal === true) {
+      this.setState({ showSignUpModal: false });
+    }
+
     this.setState({ showLoginModal: true });
   }
 
@@ -41,6 +45,10 @@ class SessionForm extends React.Component {
   }
 
   openSignUpModal() {
+    if (this.state.showLoginModal === true) {
+      this.setState({ showLoginModal: false });
+    }
+
     this.setState({ showSignUpModal: true });
   }
 
@@ -99,6 +107,22 @@ class SessionForm extends React.Component {
   }
 
   render() {
+    const loginButton = <Button
+                          bsStyle="primary"
+                          bsSize="large"
+                          onClick={this.openLoginModal}
+                          >
+                          Login
+                        </Button>;
+
+    const signUpButton = <Button
+                          bsStyle="primary"
+                          bsSize="large"
+                          onClick={this.openSignUpModal}
+                          >
+                          Sign Up
+                        </Button>;
+
     let modal;
     if (this.state.showLoginModal === true) {
       modal = <Modal className="modal" show={this.state.showLoginModal} onHide={this.closeLoginModal}>
@@ -124,7 +148,7 @@ class SessionForm extends React.Component {
                     <input type="submit" value="Submit" />
                   </div>
                 </form>
-                <p>Don't have an account? {}</p>
+                <p>Don't have an account? {signUpButton}</p>
             </Modal>;
     } else {
       modal = <Modal className="modal container-fluid" show={this.state.showSignUpModal} onHide={this.closeSignUpModal}>
@@ -164,27 +188,13 @@ class SessionForm extends React.Component {
                     <input type="submit" value="Submit" />
                   </div>
                 </form>
-                <p>Already have an account? {}</p>
+                <p>Already have an account? {loginButton}</p>
             </Modal>;
     }
     return (
-      <div className="login-form-container">
-        <Button
-          bsStyle="primary"
-          bsSize="large"
-          onClick={this.openLoginModal}
-        >
-          Login
-        </Button>
-
-        <Button
-          bsStyle="primary"
-          bsSize="large"
-          onClick={this.openSignUpModal}
-        >
-          Sign Up
-        </Button>
-
+      <div>
+        {loginButton}
+        {signUpButton}
         {modal}
       </div>
 
