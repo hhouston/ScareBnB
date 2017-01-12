@@ -78,14 +78,13 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = this.state;
     if (this.state.showLoginModal === true) {
-      this.props.login({user}).then(this.closeLoginModal());
+      this.props.login({user});
     } else {
-      this.props.signup({user}).then(this.closeSignUpModal());
+      this.props.signup({user});
     }
   }
 
   renderErrors() {
-    if (this.props.errors) {
       return(
         <ul>
           {this.props.errors.map((error, i) => (
@@ -95,7 +94,6 @@ class SessionForm extends React.Component {
           ))}
         </ul>
       );
-    }
   }
 
   navLink() {
