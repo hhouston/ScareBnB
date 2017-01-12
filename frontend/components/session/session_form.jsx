@@ -162,7 +162,7 @@ class SessionForm extends React.Component {
                 <p>Don't have an account? {signUpButton}</p>
             </Modal>;
     } else {
-      modal = <Modal className="modal container-fluid" show={this.state.showSignUpModal} onHide={this.closeSignUpModal}>
+      modal = <Modal className="modal" show={this.state.showSignUpModal} onHide={this.closeSignUpModal}>
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                   <h2>Sign Up</h2>
                   {this.renderErrors()}
