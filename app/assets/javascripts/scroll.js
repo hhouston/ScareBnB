@@ -1,9 +1,10 @@
 (function($) {
-    $(document).ready(function() {
+    $(document).scroll(function() {
+      debugger;
         $.jScrollability([
             {
                 'selector': '.text-wrapper',
-                'start': function($el) {debugger; return $el.offset().top + $el.height() },
+                'start': function($el) { return $el.offset().top + $el.height() },
                 'end': 'parent',
                 'fn': function($el,pcnt) {
                     var $spans = $el.find('span');

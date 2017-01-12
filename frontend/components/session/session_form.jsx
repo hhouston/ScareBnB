@@ -21,11 +21,20 @@ class SessionForm extends React.Component {
     this.closeLoginModal = this.closeLoginModal.bind(this);
     this.openSignUpModal = this.openSignUpModal.bind(this);
     this.closeSignUpModal = this.closeSignUpModal.bind(this);
-    this.toggleModal = this.toggleModal.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
   }
 
   componentDidUpdate() {
     // this.redirectIfLoggedIn();
+  }
+
+  demoLogin() {
+    this.props.login({
+      user: {
+        email: "guest@guest.com",
+        password: "password"
+      }
+    });
   }
 
   closeLoginModal() {
@@ -33,6 +42,8 @@ class SessionForm extends React.Component {
   }
 
   openLoginModal() {
+    this.props.receiveErrors(null);
+
     if (this.state.showSignUpModal === true) {
       this.setState({ showSignUpModal: false });
     }
@@ -45,22 +56,14 @@ class SessionForm extends React.Component {
   }
 
   openSignUpModal() {
+    this.props.receiveErrors(null);
+
     if (this.state.showLoginModal === true) {
       this.setState({ showLoginModal: false });
     }
 
     this.setState({ showSignUpModal: true });
   }
-
-  toggleModal() {
-    if (this.state.showLoginModal === true) {
-      this.setState({ showLoginModal: false });
-      this.setState({ showSignUp: true });
-    } else {
-      this.setState({ showSignUp: false });    }
-      this.setState({ showLoginModal: true });
-  }
-
 
   redirectIfLoggedIn() {
     if (this.props.loggedIn) {
@@ -76,6 +79,8 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    this.props.receiveErrors(null);
+
     const user = this.state;
     if (this.state.showLoginModal === true) {
       this.props.login({user});
@@ -119,6 +124,14 @@ class SessionForm extends React.Component {
                           onClick={this.openSignUpModal}
                           >
                           Sign Up
+                        </Button>;
+
+    const demoButton = <Button
+                          bsStyle="primary"
+                          bsSize="sm"
+                          onClick={this.demoLogin}
+                          >
+                          Demo
                         </Button>;
 
     let modal;
@@ -207,6 +220,7 @@ class SessionForm extends React.Component {
 
             <div className="collapse navbar-collapse" id="navbar-collapse">
               <ul className="nav navbar-nav navbar-right">
+                <li><a href="#">{demoButton}</a></li>
                 <li><a href="#">{loginButton}</a></li>
                 <li><a href="#">{signUpButton}</a></li>
               </ul>
