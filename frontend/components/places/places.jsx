@@ -9,9 +9,10 @@ class Places extends React.Component {
   }
 
   render() {
+    debugger;
     return(
       <div>
-        <h1>benches</h1>
+        <h1>places</h1>
       </div>
     );
   }

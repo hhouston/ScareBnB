@@ -4,7 +4,7 @@ import Places from './places';
 import { fetchPlaces } from '../../actions/place_actions';
 
 const mapStateToProps = (state) => ({
-  benches: state
+  places: state
 });
 
 const mapDispatchToProps = (dispatch) => ({
