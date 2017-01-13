@@ -1,6 +1,5 @@
 (function($) {
-    $(document).scroll(function() {
-      debugger;
+    $(document).ready(function() {
         $.jScrollability([
             {
                 'selector': '.text-wrapper',
