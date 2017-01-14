@@ -12,3 +12,10 @@ export const fetchPlace = (id) => {
     url: `api/places/${id}`
   });
 };
+
+export const fetchReviews = (id) => {
+  return $.ajax({
+    method: "GET",
+    url: `api/places/${id}/reviews`
+  });
+};

@@ -1,16 +1,18 @@
 import { connect } from 'react-redux';
 import Place from './place_show';
 
-import { fetchPlace } from '../../actions/place_actions';
+import { fetchPlace, fetchReviews } from '../../actions/place_actions';
 
 const mapStateToProps = (state) => {
   return ({
-    place: state.place
+    place: state.place,
+    reviews: state.reveiews
   });
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchPlace: (id) => dispatch(fetchPlace(id))
+  fetchPlace: (id) => dispatch(fetchPlace(id)),
+  fetchReviews: (id) => dispatch(fetchReviews(id))
 });
 
 export default connect(

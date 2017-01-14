@@ -3,16 +3,13 @@ import React from 'react';
 class Place extends React.Component {
   constructor(props){
     super(props);
-
-    this.state = {
-      place: null
-    };
   }
 
   componentDidMount() {
-    this.setState({
-      place: this.props.fetchPlace(parseInt(this.props.params.placeId))
-    });
+    // this.setState({
+    //   place: this.props.fetchPlace(parseInt(this.props.params.placeId))
+    // });
+    this.props.fetchPlace(parseInt(this.props.params.placeId));
   }
 
   render() {

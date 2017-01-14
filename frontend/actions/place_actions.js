@@ -2,7 +2,7 @@ import * as PlaceAPIUtil from '../util/place_api_util';
 
 export const RECEIVE_PLACES = 'RECEIVE_PLACES';
 export const RECEIVE_PLACE = 'RECEIVE_PLACE';
-export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
+export const RECEIVE_REVIEWS = 'RECEIVE_REVIEW';
 
 export const fetchPlace = id => dispatch => {
   PlaceAPIUtil.fetchPlace(id)
@@ -22,4 +22,15 @@ export const fetchPlaces = () => dispatch => {
 export const receivePlaces = (places) => ({
   type: RECEIVE_PLACES,
   places
+});
+
+
+export const fetchReviews = (placeId) => dispatch => {
+  PlaceAPIUtil.fetchReviews(placeId)
+    .then(reviews => dispatch(receiveReviews(reviews)));
+};
+
+export const receiveReviews = (reviews) => ({
+  type: RECEIVE_REVIEWS,
+  reviews
 });
