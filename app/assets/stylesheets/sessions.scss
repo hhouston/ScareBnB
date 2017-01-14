@@ -15,12 +15,13 @@
   margin: auto;
 }
 
-img {
+// img {
+//   height: 256px;
+//   width: 256px;
+// }
+img.logo {
   height: 32px;
   width: 32px;
-    // max-width: 100%;
-    // height: auto;
-    // width: auto\9; /* ie8 */
 }
 
 Button.test {

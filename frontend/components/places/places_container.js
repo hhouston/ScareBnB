@@ -2,10 +2,13 @@ import { connect } from 'react-redux';
 import Places from './places';
 
 import { fetchPlaces } from '../../actions/place_actions';
+import { asArray } from '../../reducers/selectors';
 
-const mapStateToProps = (state) => ({
-  places: state
-});
+const mapStateToProps = (state) => {
+  return ({
+    places: asArray(state)
+  });
+};
 
 const mapDispatchToProps = (dispatch) => ({
   fetchPlaces: () => dispatch(fetchPlaces())
