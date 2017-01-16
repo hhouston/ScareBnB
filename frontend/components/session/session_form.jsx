@@ -26,7 +26,7 @@ class SessionForm extends React.Component {
 
   componentDidMount () {
   }
-  
+
   componentDidUpdate() {
     // this.redirectIfLoggedIn();
   }
@@ -120,7 +120,7 @@ class SessionForm extends React.Component {
                           >
                           Login
                         </Button>;
-
+    const loginLink = <a href="#">Login</a>;
     const signUpButton = <Button
                           bsStyle="primary"
                           bsSize="sm"
@@ -128,6 +128,7 @@ class SessionForm extends React.Component {
                           >
                           Sign Up
                         </Button>;
+    const signUpLink = <a href="#">Sign Up</a>;
 
     const demoButton = <Button
                           bsStyle="primary"
@@ -136,6 +137,7 @@ class SessionForm extends React.Component {
                           >
                           Demo
                         </Button>;
+    const demoLink = <a href="#">Demo</a>;
 
     let modal;
     if (this.state.showLoginModal === true) {
@@ -222,11 +224,17 @@ class SessionForm extends React.Component {
             </div>
 
             <div className="collapse navbar-collapse" id="navbar-collapse">
+              <form className="navbar-form navbar-left">
+                <div className="form-group">
+                  <input type="text" className="form-control" placeholder="Search" />
+                </div>
+                <button type="submit" className="btn btn-default">Submit</button>
+              </form>
               <ul className="nav navbar-nav navbar-right">
-                <li><a href="#">{demoButton}</a></li>
-                <li><a href="#">{loginButton}</a></li>
-                <li><a href="#">{signUpButton}</a></li>
-              </ul>
+                <li><a href="#">{demoLink}</a></li>
+                <li><a href="#">{loginLink}</a></li>
+                <li><a href="#">{signUpLink}</a></li>
+                </ul>
             </div>
           </div>
         </nav>

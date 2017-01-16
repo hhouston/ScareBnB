@@ -1,6 +1,8 @@
 class Api::PlacesController < ApplicationController
   def index
-    @places = Place.all
+    places = Place.all
+    @places = places.includes(:reviews)
+
   end
 
   def show

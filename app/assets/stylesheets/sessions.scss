@@ -15,10 +15,7 @@
   margin: auto;
 }
 
-// img {
-//   height: 256px;
-//   width: 256px;
-// }
+
 img.logo {
   height: 32px;
   width: 32px;
@@ -28,32 +25,25 @@ Button.test {
   color: red;
 }
 
-// .fade-scale {
-//   transform: scale(0);
-//   opacity: 0;
-//   -webkit-transition: all .25s linear;
-//   -o-transition: all .25s linear;
-//   transition: all .25s linear;
+.place-detail-img {
+  display: flex;
+  justify-content: center;
+}
+// jScrollability
+// .section-3 .text-wrapper {
+//     max-width: 600px;
+//     margin: auto;
+//     font-size: 2em;
+//     line-height: 1.5em;
+//     margin-top: 4%;
+//
 // }
 //
-// .fade-scale.in {
-//   opacity: 1;
-//   transform: scale(1);
+// .section-3 .text-wrapper span {
+//     opacity: 0;
+//     -webkit-transition: opacity 0.2s;
 // }
-.section-3 .text-wrapper {
-    max-width: 600px;
-    margin: auto;
-    font-size: 2em;
-    line-height: 1.5em;
-    margin-top: 4%;
-
-}
-
-.section-3 .text-wrapper span {
-    opacity: 0;
-    -webkit-transition: opacity 0.2s;
-}
-
-.section-3 .text-wrapper span.visible {
-    opacity: 1;
-}
+//
+// .section-3 .text-wrapper span.visible {
+//     opacity: 1;
+// }

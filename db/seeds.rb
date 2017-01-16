@@ -27,8 +27,8 @@ Place.create(
       rating: 3.4,
       lat: 37.802289,
       long: -122.405773,
-      image_url: "https://en.wikipedia.org/wiki/File:Coittower1.jpg",
-      info: "this was a prison"
+      image_url: "http://noehill.com/sf/landmarks/northbeach/coit_tower_red_and_gold_thumb.jpg",
+      info: "firehose building"
     }
   ]
 )

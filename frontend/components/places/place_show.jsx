@@ -3,28 +3,46 @@ import React from 'react';
 class Place extends React.Component {
   constructor(props){
     super(props);
+
   }
 
   componentDidMount() {
-    // this.setState({
-    //   place: this.props.fetchPlace(parseInt(this.props.params.placeId))
-    // });
-    this.props.fetchPlace(parseInt(this.props.params.placeId));
+    const placeId = this.props.params.placeId;
+    this.props.fetchPlace(parseInt(placeId));
+
+
   }
 
   render() {
-    // const place = this.props.fetchPlace(parseInt(this.props.params.placeId));
-    // let name;
-    // if (this.state) {
-    //   name = this.state.place.name;
-    // }
 
+    let reviews;
+    if (this.props.place.reviews) {
+      reviews = this.props.place.reviews.map(review => <p>{review.text}</p>);
+    } else {
+      reviews = "Be the first to review this place!";
+    }
     return(
       <div>
+        <div className="row">
+          <div className="col-xs-12 col-md-12 col-lg-12">
+            <div className="thumbnail">
+              <img src="https://www.familytree.com/wp-content/uploads/2014/04/alcatraz.jpg" alt="Image Not Available" />
+              <div className="caption">
+                <h3>{this.props.place.name}</h3>
+                <p>{this.props.place.info}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {
           this.props.place.name
         }
-        <h4>hey</h4>
+
+        <div>
+          <h1>Reviews</h1>
+          {reviews}
+        </div>
       </div>
     );
   }
