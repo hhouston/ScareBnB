@@ -14,8 +14,8 @@ export const receivePlace = (place) => ({
   place
 });
 
-export const fetchPlaces = () => dispatch => {
-  PlaceAPIUtil.fetchPlaces()
+export const fetchPlaces = filters => dispatch => {
+  PlaceAPIUtil.fetchPlaces(filters)
     .then(places => dispatch(receivePlaces(places)));
 };
 

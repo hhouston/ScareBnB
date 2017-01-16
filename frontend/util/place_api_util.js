@@ -1,8 +1,8 @@
-export const fetchPlaces = () => (
+export const fetchPlaces = (data) => (
    $.ajax({
     method: "GET",
     url: 'api/places',
-    error: (err) => console.log(err)
+    data
   })
 );
 
