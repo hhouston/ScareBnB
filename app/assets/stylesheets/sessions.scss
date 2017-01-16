@@ -19,7 +19,6 @@
 img.logo {
   height: 32px;
   width: 32px;
-  background: image-url('assets/haunted-house.svg')
 }
 
 Button.test {
@@ -29,6 +28,10 @@ Button.test {
 .place-detail-img {
   display: flex;
   justify-content: center;
+}
+
+.home-content {
+  margin-top: 60px;
 }
 // jScrollability
 // .section-3 .text-wrapper {

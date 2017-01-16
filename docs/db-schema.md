@@ -9,7 +9,7 @@ password_digest | string    | not null
 session_token   | string    | not null, indexed, unique
 image_url       | string    | default
 
-## places (filter by location(city?))
+## places
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key, indexed
@@ -22,6 +22,7 @@ lat         | float     |
 long        | float     |
 image_url   | string    | default
 info        | string    | not null
+guests      | integer   | not null
 
 ## bookings
 column name | data type | details

@@ -14,9 +14,12 @@
 #  info       :text             not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  guests     :integer          not null
 #
 
 class Place < ActiveRecord::Base
   has_many :reviews,
   foreign_key: :place_id
+
+  has_many :bookings
 end

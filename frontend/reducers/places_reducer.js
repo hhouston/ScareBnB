@@ -1,7 +1,6 @@
-
 import { RECEIVE_PLACES } from '../actions/place_actions';
 
-const placeReducer = (state = {}, action) => {
+const placesReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_PLACES:
@@ -11,4 +10,4 @@ const placeReducer = (state = {}, action) => {
   }
 };
 
-export default placeReducer;
+export default placesReducer;

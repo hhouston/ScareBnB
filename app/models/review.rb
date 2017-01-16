@@ -16,6 +16,8 @@ class Review < ActiveRecord::Base
   validates :place_id, :author_id, presence: true
 
   belongs_to :place,
-  foreign_key: :place_id,
-  primary_key: :id
+  foreign_key: :place_id
+
+  belongs_to :user,
+  foreign_key: :author_id
 end

@@ -120,7 +120,7 @@ class SessionForm extends React.Component {
                           >
                           Login
                         </Button>;
-    const loginLink = <a href="#">Login</a>;
+    const loginLink = <a href="#" onClick={this.openLoginModal}>Login</a>;
     const signUpButton = <Button
                           bsStyle="primary"
                           bsSize="sm"
@@ -219,7 +219,7 @@ class SessionForm extends React.Component {
                 <span className="icon-bar"></span>
               </button>
               <a className="navbar-brand" href="#">
-                <img className="logo" alt="ScareBnB" />
+                <img className="logo" href="/assets/haunted-house.svg" alt="ScareBnB"  />
               </a>
             </div>
 
@@ -231,10 +231,10 @@ class SessionForm extends React.Component {
                 <button type="submit" className="btn btn-default">Submit</button>
               </form>
               <ul className="nav navbar-nav navbar-right">
-                <li><a href="#">{demoLink}</a></li>
-                <li><a href="#">{loginLink}</a></li>
-                <li><a href="#">{signUpLink}</a></li>
-                </ul>
+                <li>{demoLink}</li>
+                <li>{loginLink}</li>
+                <li>{signUpLink}</li>
+              </ul>
             </div>
           </div>
         </nav>
