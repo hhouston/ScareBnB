@@ -12,7 +12,7 @@ class Search extends React.Component {
       <div>
         <h2>search</h2>
         <PlacesIndexContainer />
-        <Map />
+        <Map className="map-right-side"/>
         <h2>search</h2>
         <h2>search</h2>
         <h2>search</h2>
