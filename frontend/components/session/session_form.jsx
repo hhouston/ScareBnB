@@ -219,7 +219,7 @@ class SessionForm extends React.Component {
                 <span className="icon-bar"></span>
               </button>
               <a className="navbar-brand" href="#">
-                <img className="logo" alt="ScareBnB" src="assets/haunted-house.svg" />
+                <img className="logo" alt="ScareBnB" />
               </a>
             </div>
 

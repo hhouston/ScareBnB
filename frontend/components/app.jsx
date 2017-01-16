@@ -6,7 +6,6 @@ const App = ({ children }) => (
   <div>
     <header>
       <NavbarContainer />
-      <h1>Scare BnB</h1>
     </header>
     { children }
   </div>
