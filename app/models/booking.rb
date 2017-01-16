@@ -16,6 +16,8 @@ class Booking < ActiveRecord::Base
 
   belongs_to :place
 
-  belongs_to :user,
-  foreign_key: :guest_id
+  belongs_to :guest,
+  primary_key: :id,
+  foreign_key: :guest_id,
+  class_name: :User
 end

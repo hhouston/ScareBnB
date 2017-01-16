@@ -1,8 +1,12 @@
 class Api::PlacesController < ApplicationController
   def index
-    places = Place.all
-    @places = places.includes(:reviews)
+    if params[:bounds]
+      places = Place.in_bounds(params[:bounds])
+    else
+      places = Place.all
+    end
 
+    @places = places.includes(:reviews)
   end
 
   def show

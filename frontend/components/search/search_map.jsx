@@ -12,9 +12,12 @@ class Search extends React.Component {
       <div>
         <h2>search</h2>
         <PlacesIndexContainer />
-        <Map className="map-right-side"/>
-        <h2>search</h2>
-        <h2>search</h2>
+        <div className="map-right-side">
+          <Map
+            places={this.props.places}
+            updateFilter={this.props.updateFilter} />
+        </div>
+
         <h2>search</h2>
       </div>
     );

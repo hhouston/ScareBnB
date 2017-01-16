@@ -7,7 +7,7 @@ import SessionFormContainer from './session/session_form_container';
 import PlacesIndexContainer from './places/places_container';
 import PlaceShowContainer from './places/place_show_container';
 import Home from './home/home';
-import SearchMap from './search/search_map';
+import SearchContainer from './search/search_container';
 
 const Root = ({ store }) => (
   <Provider store={ store }>
@@ -15,7 +15,7 @@ const Root = ({ store }) => (
       <Route path="/" component={ App }>
         <IndexRoute component={ Home }/>
         <Route path="/places/:placeId" component={ PlaceShowContainer } />
-        <Route path="/search" component={ SearchMap } />
+        <Route path="/search" component={ SearchContainer } />
       </Route>
     </Router>
   </Provider>
