@@ -2,7 +2,7 @@ export const fetchPlaces = (filters) => (
    $.ajax({
     method: "GET",
     url: 'api/places',
-    filters
+    data: filters
   })
 );
 

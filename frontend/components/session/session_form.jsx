@@ -34,7 +34,7 @@ class SessionForm extends React.Component {
   demoLogin() {
     this.props.login({
       user: {
-        email: "guest@guest.com",
+        email: "guest@email.com",
         password: "password"
       }
     });
@@ -128,7 +128,7 @@ class SessionForm extends React.Component {
                           >
                           Sign Up
                         </Button>;
-    const signUpLink = <a href="#">Sign Up</a>;
+    const signUpLink = <a href="#" onClick={this.openSignUpModal}>Sign Up</a>;
 
     const demoButton = <Button
                           bsStyle="primary"
@@ -137,7 +137,7 @@ class SessionForm extends React.Component {
                           >
                           Demo
                         </Button>;
-    const demoLink = <a href="#">Demo</a>;
+    const demoLink = <a href="#" onClick={this.demoLogin}>Demo</a>;
 
     let modal;
     if (this.state.showLoginModal === true) {

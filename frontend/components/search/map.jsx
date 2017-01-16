@@ -43,6 +43,7 @@ class Map extends React.Component {
 }
 
     _handleMarkerClick(place) {
+      //change this to load detail of a place
     this.props.router.push(`places/${place.id}`);
   }
 
