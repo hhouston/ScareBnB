@@ -44,7 +44,7 @@ Place.create(
       rating: 3.4,
       lat: 37.802289,
       long: -122.405773,
-      image_url: "https://noehill.com/sf/landmarks/northbeach/coit_tower_red_and_gold_thumb.jpg",
+      image_url: "https://res.cloudinary.com/drhenvicq/image/upload/v1484611641/coit_tower_red_and_gold_thumb_evruwf.jpg",
       info: "firehose building",
       guests: 5
     }
