@@ -5,9 +5,12 @@ import { asArray } from '../../reducers/selectors';
 
 import Search from './search_map';
 
-const mapStateToProps = state => ({
-  places: asArray(state)
-});
+const mapStateToProps = state => {
+  return ({
+    places: asArray(state),
+    maxGuest: state.filters.maxGuest
+  });
+};
 
 const mapDispatchToProps = dispatch => ({
   updateFilter: (filter, value) => dispatch(updateFilter(filter, value))

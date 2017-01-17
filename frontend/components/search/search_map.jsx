@@ -1,6 +1,7 @@
 import React from 'react';
 import Map from './map';
 import PlacesIndexContainer from '../places/places_container';
+import FilterForm from './filter_form';
 
 class Search extends React.Component {
   constructor(props) {
@@ -11,6 +12,9 @@ class Search extends React.Component {
     return(
       <div>
         <h2>search</h2>
+        <FilterForm
+          updateFilter={this.props.updateFilter}
+          />
         <PlacesIndexContainer />
         <div className="map-right-side">
           <Map

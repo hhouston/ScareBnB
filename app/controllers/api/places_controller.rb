@@ -1,7 +1,7 @@
 class Api::PlacesController < ApplicationController
   def index
-    if params[:bounds]
-      places = Place.in_bounds(params[:bounds])
+    if params[:bounds] && params[:maxGuest]
+      places = Place.in_bounds_max_guest(params[:bounds], params[:maxGuest])
     else
       places = Place.all
     end

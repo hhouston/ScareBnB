@@ -44,7 +44,7 @@ class Map extends React.Component {
 
     _handleMarkerClick(place) {
       //change this to load detail of a place
-    this.props.router.push(`places/${place.id}`);
+    // this.props.router.push(`places/${place.id}`);
   }
 
   // _handleClick(coords) {
@@ -59,4 +59,4 @@ class Map extends React.Component {
   }
 }
 
-export default withRouter(Map);
+export default Map;

@@ -24,6 +24,7 @@ class Places extends React.Component {
                         <p>{place.info}</p>
                         <p>Price: ${place.price}/night</p>
                         <p>Rating: {place.rating}</p>
+                        <p>MaxCapacity: {place.guests}</p>
                         <p>
                           <a href="#" className="btn btn-primary" role="button">Book</a>
                         </p>
