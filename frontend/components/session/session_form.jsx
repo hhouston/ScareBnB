@@ -168,7 +168,7 @@ class SessionForm extends React.Component {
             </Modal>;
     } else {
       modal = <Modal className="modal" show={this.state.showSignUpModal} onHide={this.closeSignUpModal}>
-                <form onSubmit={this.handleSubmit} className="login-form-box">
+                <form onSubmit={this.handleSubmit} className="signup-form-box">
                   <h2>Sign Up</h2>
                   {this.renderErrors()}
                   <div className="signup-form">
@@ -187,24 +187,33 @@ class SessionForm extends React.Component {
                             className="login-input" />
                         </span>
                       </div>
-                    <label> Email:
-                      <input type="text"
-                        value={this.state.email}
-                        onChange={this.update("email")}
-                        className="login-input" />
-                    </label>
+                      <div className="row">
+                        <span className="col-xs-12 col-sm-12 col-md-6 col-lg-6 fname">
+                          <label> Email:
+                            <input type="text"
+                              value={this.state.email}
+                              onChange={this.update("email")}
+                              className="signup-input" />
+                          </label>
+                          <br/>
+                          </span>
+                          <span className="col-xs-12 col-sm-12 col-md-6 col-lg-6 fname">
+                            <label> Password:
+                              <input type="password"
+                                value={this.state.password}
+                                onChange={this.update("password")}
+                                className="signup-input" />
+                            </label>
+                          </span>
+                      </div>
                     <br/>
-                    <label> Password:
-                      <input type="password"
-                        value={this.state.password}
-                        onChange={this.update("password")}
-                        className="login-input" />
-                    </label>
-                    <br/>
+
                     <input type="submit" value="Submit" />
                   </div>
                 </form>
-                <p>Already have an account? {loginButton}</p>
+                <div className="signup-submit" style={{display: 'flex'}}>
+                  <p>Already have an account? {loginButton}</p>
+                </div>
             </Modal>;
     }
     return (
