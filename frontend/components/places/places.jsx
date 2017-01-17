@@ -16,7 +16,7 @@ class Places extends React.Component {
           <div className="row">
               {
                 this.props.places.map(place =>
-                  <div className="col-sm-6 col-md-4" key={place.id}>
+                  <div className="col-xs-12 col-sm-6 col-md-4" key={place.id}>
                     <div className="thumbnail">
                       <a href={`#/places/${place.id}`}><img src={place.image_url} alt="image not available" /></a>
                       <div className="caption">
