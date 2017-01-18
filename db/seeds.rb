@@ -34,7 +34,8 @@ Place.create(
       long: -122.422709,
       image_url: "https://www.familytree.com/wp-content/uploads/2014/04/alcatraz.jpg",
       info: "this was a prison",
-      guests: 3
+      guests: 3,
+      place_type: "place"
     },
     {
       host_id: 1,
@@ -46,7 +47,8 @@ Place.create(
       long: -122.405773,
       image_url: "https://res.cloudinary.com/drhenvicq/image/upload/v1484611641/coit_tower_red_and_gold_thumb_evruwf.jpg",
       info: "firehose building",
-      guests: 5
+      guests: 5,
+      place_type: "experience"
     }
   ]
 )

@@ -15,6 +15,10 @@
   margin: auto;
 }
 
+.login-title {
+  display: flex;
+  justify-content: center;
+}
 
 img.logo {
   height: 32px;
@@ -32,6 +36,14 @@ Button.test {
 
 .home-content {
   margin-top: 60px;
+}
+
+.create-place-form {
+  margin-top: 60px;
+}
+
+.new-listing-container {
+  margin: 40px 40px;
 }
 // jScrollability
 // .section-3 .text-wrapper {

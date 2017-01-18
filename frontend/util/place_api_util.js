@@ -13,6 +13,14 @@ export const fetchPlace = (id) => {
   });
 };
 
+export const createPlace = (place) => {
+  return $.ajax({
+    method: "POST",
+    url: 'api/places',
+    data: {place}
+  });
+};
+
 export const fetchReviews = (id) => {
   return $.ajax({
     method: "GET",

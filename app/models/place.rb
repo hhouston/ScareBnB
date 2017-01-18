@@ -18,7 +18,7 @@
 #
 
 class Place < ActiveRecord::Base
-  validates :host_id, :location, :price, :rating, :info, :lat, :long, :guests, presence: true
+  validates :host_id, :location, :price, :info, :lat, :long, :guests, :place_type, presence: true
 
   has_many :reviews,
   primary_key: :id,
