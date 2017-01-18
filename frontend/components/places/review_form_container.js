@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
-import Place from './place_show';
+import ReviewForm from './review_form';
 
-import { fetchPlace, createReview } from '../../actions/place_actions';
+import { createReview } from '../../actions/place_actions';
 
 const mapStateToProps = (state) => {
   return ({
@@ -10,10 +10,10 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchPlace: (id) => dispatch(fetchPlace(id))
+  createReview: (review) => dispatch(createReview(review))
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Place);
+)(ReviewForm);

@@ -13,10 +13,10 @@
 
 class Review < ActiveRecord::Base
   validates :rating, inclusion: { in: (1..5) }
-  validates :place_id, :author_id, presence: true
+  validates :text, :author_id, :place_id, presence: true
 
   belongs_to :place
-  
+
   belongs_to :author,
   primary_key: :id,
   foreign_key: :author_id,

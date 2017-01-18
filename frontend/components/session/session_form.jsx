@@ -124,7 +124,7 @@ class SessionForm extends React.Component {
         </Button>;
         const demoLink = <a href="#" onClick={this.demoLogin}>Demo</a>;
 
-        const hostLink = <a href="/places/new">Host</a>;
+        const hostLink = <a href="/new">Host</a>;
 
         let modal;
         if (this.state.showLoginModal === true) {

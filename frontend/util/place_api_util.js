@@ -27,3 +27,11 @@ export const fetchReviews = (id) => {
     url: `api/places/${id}/reviews`
   });
 };
+
+export const createReview = (review) => (
+  $.ajax({
+    method: "POST",
+    url: `api/reviews`,
+    data: {review}
+  })
+);

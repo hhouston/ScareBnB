@@ -1,4 +1,4 @@
-import { RECEIVE_PLACE, RECEIVE_REVIEWS } from '../actions/place_actions';
+import { RECEIVE_PLACE, RECEIVE_REVIEWS, RECEIVE_REVIEW } from '../actions/place_actions';
 
 const placeReducer = (state = {}, action) => {
   Object.freeze(state);
