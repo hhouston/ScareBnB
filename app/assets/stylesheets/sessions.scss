@@ -25,6 +25,11 @@ img.logo {
   width: 32px;
 }
 
+.search {
+  position: fixed;
+  z-index: 5;
+}
+
 Button.test {
   color: red;
 }
