@@ -7,7 +7,7 @@ class ReviewForm extends React.Component {
 
         this.state = {
             text: "",
-            rating: 0,
+            rating: 1,
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -18,7 +18,7 @@ class ReviewForm extends React.Component {
     clearReviewForm() {
       this.setState({
         text:"",
-        rating:0
+        rating: 1
       });
     }
 
@@ -31,6 +31,7 @@ class ReviewForm extends React.Component {
       const review = Object.assign({}, this.state, {
         place_id: this.props.place.id,
         author_id: this.props.place.host_id
+        // TODO: fix: add currentUser
       });
 
 
@@ -38,7 +39,6 @@ class ReviewForm extends React.Component {
       this.props.createReview(review);
       this.clearReviewForm();
 
-      // TODO: refresh page
     }
 
 
@@ -66,7 +66,6 @@ class ReviewForm extends React.Component {
 
                     <button type="submit">Review</button>
                 </form>
-
             </div>
         );
     }

@@ -69,3 +69,20 @@ Review.create(
     }
   ]
 )
+
+Booking.create(
+  [
+    {
+      author_id: 1,
+      place_id: 1,
+      start_date: "1",
+      end_date: "2"
+    },
+    {
+      author_id: 1,
+      place_id: 1,
+      start_date: "2",
+      end_date: "3"
+    }
+  ]
+)

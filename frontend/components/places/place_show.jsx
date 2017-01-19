@@ -1,5 +1,7 @@
 import React from 'react';
 import ReviewFormContainer from './review_form_container';
+import ReviewIndexItemContainer from './review_index_item_container';
+import DateRangePickerWrapper from '../date_picker/DateRangePickerWrapper';
 
 class Place extends React.Component {
   constructor(props){
@@ -14,7 +16,7 @@ class Place extends React.Component {
   render() {
     let reviews;
     if (this.props.place.reviews) {
-      reviews = this.props.place.reviews.map(review => <p key={review.id}>{review.text}</p>);
+      reviews = this.props.place.reviews.map(review => <ReviewIndexItemContainer key={review.id} review={review} />);
     } else {
       reviews = "Be the first to review this place!";
     }
@@ -32,16 +34,21 @@ class Place extends React.Component {
           </div>
         </div>
 
+        <DateRangePickerWrapper
+          createBooking={this.props.createBooking}
+          placeId={this.props.place.id}
+        />
+
         {
           this.props.place.name
         }
 
+        <ReviewFormContainer reviews={reviews}/>
+
         <div>
           <h1>Reviews</h1>
-          {reviews}
+            {reviews}
         </div>
-
-        <ReviewFormContainer/>
       </div>
     );
   }

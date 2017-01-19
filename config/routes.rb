@@ -9,7 +9,7 @@ Rails.application.routes.draw do
       resources :reviews, only: [:index]
     end
     resources :reviews, only: [:create, :destroy]
-
+    resources :bookings, only: [:create, :destroy, :index]
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

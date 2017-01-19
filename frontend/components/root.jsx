@@ -27,7 +27,6 @@ const Root = ({ store }) => {
           <Route path="/places/:placeId" component={ PlaceShowContainer } />
           <Route path="/search" component={ SearchContainer } />
           <Route path="/new" component={ PlaceFormContainer } />
-
         </Route>
       </Router>
     </Provider>

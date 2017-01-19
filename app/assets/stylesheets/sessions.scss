@@ -25,9 +25,24 @@ img.logo {
   width: 32px;
 }
 
-.search {
+.splash-img {
+  margin-top: 30px;
+  width: 100%;
+  // height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 25% 30%;
+  // position: fixed;
+  background-attachment: fixed;
+  // background-color: red;
+  overflow: scroll;
+  background-image: url("https://res.cloudinary.com/drhenvicq/image/upload/v1484764304/1ip1dozvo8i-andrea-boldizsar_p0ensb.jpg")
+}
+
+.search-bar {
   position: fixed;
-  z-index: 15;
+  margin-top: 100px;
+  z-index: 1;
 }
 
 Button.test {
@@ -40,7 +55,26 @@ Button.test {
 }
 
 .home-content {
-  margin-top: 60px;
+  margin-top: 50px;
+}
+
+.test {
+  background-color:black;
+  height: 500px;
+  width: 100%;
+  z-index: 100;
+}
+
+.featured-places {
+  padding-top: 800px;
+  height: 1800px;
+}
+
+.featured-places-main {
+  background-color: white;
+}
+.featured-places-bg {
+  background-color: grey;
 }
 
 .create-place-form {
