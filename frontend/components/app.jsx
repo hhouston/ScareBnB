@@ -1,10 +1,12 @@
 import React from 'react';
-import GreetingContainer from './greeting/greeting_container';
+import NavbarContainer from './navbar/navbar_container';
+import SessionFormContainer from './session/session_form_container';
 
 const App = ({ children }) => (
   <div>
-    <GreetingContainer />
-    <h1>Scare BnB</h1>
+    <header>
+      <NavbarContainer />
+    </header>
     { children }
   </div>
 );

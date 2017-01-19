@@ -1,0 +1,104 @@
+// Place all the styles related to the api/sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.signup-name {
+  // display: flex;
+  // justify-content: space-around;
+  text-align: center;
+
+}
+
+.lname, .fname {
+  // display: flex;
+  display: inline-block;
+  margin: auto;
+}
+
+.login-title {
+  display: flex;
+  justify-content: center;
+}
+
+img.logo {
+  height: 32px;
+  width: 32px;
+}
+
+.splash-img {
+  margin-top: 30px;
+  width: 100%;
+  // height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 25% 30%;
+  // position: fixed;
+  background-attachment: fixed;
+  // background-color: red;
+  overflow: scroll;
+  background-image: url("https://res.cloudinary.com/drhenvicq/image/upload/v1484764304/1ip1dozvo8i-andrea-boldizsar_p0ensb.jpg")
+}
+
+.search-bar {
+  position: fixed;
+  margin-top: 100px;
+  z-index: 1;
+}
+
+Button.test {
+  color: red;
+}
+
+.place-detail-img {
+  display: flex;
+  justify-content: center;
+}
+
+.home-content {
+  margin-top: 50px;
+}
+
+.test {
+  background-color:black;
+  height: 500px;
+  width: 100%;
+  z-index: 100;
+}
+
+.featured-places {
+  padding-top: 800px;
+  height: 1800px;
+}
+
+.featured-places-main {
+  background-color: white;
+}
+.featured-places-bg {
+  background-color: grey;
+}
+
+.create-place-form {
+  margin-top: 60px;
+}
+
+.new-listing-container {
+  margin: 40px 40px;
+}
+// jScrollability
+// .section-3 .text-wrapper {
+//     max-width: 600px;
+//     margin: auto;
+//     font-size: 2em;
+//     line-height: 1.5em;
+//     margin-top: 4%;
+//
+// }
+//
+// .section-3 .text-wrapper span {
+//     opacity: 0;
+//     -webkit-transition: opacity 0.2s;
+// }
+//
+// .section-3 .text-wrapper span.visible {
+//     opacity: 1;
+// }

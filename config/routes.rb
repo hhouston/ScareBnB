@@ -5,6 +5,11 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     resource :session, only: [:create, :destroy]
     resources :users, only: [:create]
+    resources :places do
+      resources :reviews, only: [:index]
+    end
+    resources :reviews, only: [:create, :destroy]
+    resources :bookings, only: [:create, :destroy, :index]
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

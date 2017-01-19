@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+   font-family: 'Open Sans', sans-serif;
+}
+
+html, body {
+  margin: 0;
+}
+
+html, body, .app, #root {
+  height: 100%;
+  width: 100%;
+  background-color: #F8F8FF;
+}
+
+#map-container {
+  width: 500px;
+  height: 500px;
+}
+
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
