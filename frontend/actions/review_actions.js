@@ -22,9 +22,9 @@ export const deleteReview = (id) => dispatch => (
     .then(review => dispatch(removeReview(review)))
 );
 
-export const removeReview = (id) => dispatch => ({
+export const removeReview = (review) => ({
   type: REMOVE_REVIEW,
-  id
+  review
 });
 
 export const receiveReviews = (reviews) => ({

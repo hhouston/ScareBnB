@@ -11,12 +11,13 @@ class Place extends React.Component {
   componentDidMount() {
     const placeId = parseInt(this.props.params.placeId);
     this.props.fetchPlace(placeId);
+    this.props.fetchReviews(placeId);
   }
 
   render() {
     let reviews;
-    if (this.props.place.reviews) {
-      reviews = this.props.place.reviews.map(review => <ReviewIndexItemContainer key={review.id} review={review} />);
+    if (this.props.reviews) {
+      reviews = Object.keys(this.props.reviews).map(id => <ReviewIndexItemContainer key={id} review={this.props.reviews[id]} />);
     } else {
       reviews = "Be the first to review this place!";
     }

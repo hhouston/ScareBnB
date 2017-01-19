@@ -66,6 +66,7 @@ class PlaceForm extends React.Component {
             guests: this.state.guests,
             place_type: this.state.place_type
         };
+        
         this.props.createPlace(place).then(data => {
             this.props.router.push(`/places/${data.place.id}`);
         });

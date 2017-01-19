@@ -7,13 +7,15 @@ import merge from 'lodash/merge';
 const ReviewsReducer = (state = {}, action) => {
   Object.freeze(state);
   console.log(action.type);
+
+  let newState;
   switch (action.type) {
     case RECEIVE_REVIEWS:
       return action.reviews;
     case RECEIVE_REVIEW:
-      return merge({}, state, {[action.review.id]:action.review});
+      return merge({}, state,{[action.review.id]:action.review});
     case REMOVE_REVIEW:
-      let newState = merge({}, state);
+      newState = merge({}, state);
       delete newState[action.review.id];
       return newState;
     default:
