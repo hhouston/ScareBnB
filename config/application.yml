@@ -1,0 +1,18 @@
+development:
+  cloud_name: drhenvicq
+  api_key: '455965295764671'
+  api_secret: RhdfpqQNZozpsyrUMYYNTP80VQk
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: drhenvicq
+  api_key: '455965295764671'
+  api_secret: RhdfpqQNZozpsyrUMYYNTP80VQk
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: drhenvicq
+  api_key: '455965295764671'
+  api_secret: RhdfpqQNZozpsyrUMYYNTP80VQk
+  enhance_image_tag: true
+  static_image_support: false

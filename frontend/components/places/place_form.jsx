@@ -1,7 +1,12 @@
 import React from 'react';
+import Dropzone from 'react-dropzone';
+import request from 'superagent';
+
 import {SingleDatePicker} from 'react-dates';
 import {withRouter} from 'react-router';
 
+const CLOUDINARY_UPLOAD_PRESET = 'upload';
+const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/your_cloudinary_app_name/upload';
 class PlaceForm extends React.Component {
     constructor(props) {
         super(props);
@@ -24,9 +29,12 @@ class PlaceForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        Cloudinary::Uploader.upload('/home/my_image.jpg')
+
         this.props.createPlace(this.state).then(data => {
             this.props.router.push(`/places/${data.place.id}`);
         });
+
     }
 
     update(property) {
@@ -99,7 +107,14 @@ class PlaceForm extends React.Component {
                         <div className="form-group">
                             <label>Select a photo</label>
                             <input type="file" value={this.state.image_url} onChange={this.update('image_url')} className="form-control-file" aria-describedby="fileHelp"/>
+                              <Dropzone
+                                multiple={false}
+                                accept="image/*"
+                                onDrop={this.onImageDrop.bind(this)}>
+                                <p>Drop an image or click to select a file to upload.</p>
+                              </Dropzone>
                             <small id="fileHelp" className="form-text text-muted">*Please add a picture of the listing*</small>
+
                         </div>
 
                         <button type="submit" className="btn btn-primary">Save</button>
