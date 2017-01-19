@@ -13,7 +13,6 @@ class ReviewIndexItem extends React.Component {
     return(
       <div className="review-index-item">
         <p>{this.props.review.text}</p>
-        // TODO: add access to the user through review
         <span>{this.props.review.fname}</span>
         {
           this.props.review.author_id === userId ? <button onClick={() => this.props.deleteReview(this.props.review.id)}>Delete</button> : ""

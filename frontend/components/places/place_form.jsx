@@ -2,36 +2,71 @@ import React from 'react';
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
 
-import {SingleDatePicker} from 'react-dates';
 import {withRouter} from 'react-router';
+import PlacesAutocomplete, {geocodeByAddress} from 'react-places-autocomplete';
+import { createPlace } from '../../actions/place_actions';
 
 const CLOUDINARY_UPLOAD_PRESET = 'upload';
-const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/your_cloudinary_app_name/upload';
+const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/drhenvicq/upload';
 class PlaceForm extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
             name: '',
-            location: '',
+            address: '',
             price: '',
-            lat: 201.33,
-            long: 22.22,
+            lat: null,
+            long: null,
             image_url: '',
             info: '',
             guests: 1,
-            place_type: ''
+            place_type: '',
+            uploadedFile: null
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleSearch = this.handleSearch.bind(this);
         this.update = this.update.bind(this);
+        this.updateAddress = (address) => this.setState({ address });
+
+    }
+
+    onImageDrop(files) {
+        this.setState({uploadedFile: files[0]});
+
+        this.handleImageUpload(files[0]);
+    }
+
+    handleImageUpload(file) {
+        let upload = request.post(CLOUDINARY_UPLOAD_URL).field('upload_preset', CLOUDINARY_UPLOAD_PRESET).field('file', file);
+
+        upload.end((err, response) => {
+            if (err) {
+                console.error(err);
+            }
+
+            if (response.body.secure_url !== '') {
+                this.setState({image_url: response.body.secure_url});
+            }
+        });
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        Cloudinary::Uploader.upload('/home/my_image.jpg')
 
-        this.props.createPlace(this.state).then(data => {
+        const place = {
+            name: this.state.name,
+            location: this.state.address,
+            price: this.state.price,
+            lat: this.state.lat,
+            long: this.state.long,
+            image_url: this.state.image_url,
+            info: this.state.info,
+            guests: this.state.guests,
+            place_type: this.state.place_type
+        };
+        this.props.createPlace(place).then(data => {
             this.props.router.push(`/places/${data.place.id}`);
         });
 
@@ -41,17 +76,23 @@ class PlaceForm extends React.Component {
         return e => this.setState({[property]: e.target.value});
     }
 
-    errors() {
-        if (this.props.errors) {
-            return (this.props.errors.map(error => {
-                return (
-                    <li className="error" key={error}>{error}</li>
-                );
-            }));
-        }
+    handleSearch(e) {
+        e.preventDefault();
+        const {address} = this.state;
+        geocodeByAddress(address, (err, {lat, lng}) => {
+            if (err) {
+                console.log('Oh no!', err);
+            }
+
+            this.setState({lat: lat, long: lng});
+            console.log(`Yay! got latitude and longitude for ${address}`, {lat, lng});
+        });
+
     }
 
     render() {
+        const geocoder = new google.maps.Geocoder();
+
         return (
             <div>
                 <form onSubmit={this.handleSubmit} className="create-form-box">
@@ -85,11 +126,15 @@ class PlaceForm extends React.Component {
                             </select>
                         </div>
 
-                        <div className="location">
-                            Location:
-                            <div className="form-group">
-                                <input type="text" value={this.state.location} onChange={this.update('location')} className="form-control" placeholder="Address"/>
-                            </div>
+                        <div className="search">
+                            Address:
+                            <PlacesAutocomplete
+                              value={this.state.address}
+                              onChange={this.updateAddress}
+                            />
+
+                            <button onClick={this.handleSearch} type="submit">Submit</button>
+
                         </div>
 
                         <div className="form-group">
@@ -105,20 +150,14 @@ class PlaceForm extends React.Component {
                         </div>
 
                         <div className="form-group">
-                            <label>Select a photo</label>
-                            <input type="file" value={this.state.image_url} onChange={this.update('image_url')} className="form-control-file" aria-describedby="fileHelp"/>
-                              <Dropzone
-                                multiple={false}
-                                accept="image/*"
-                                onDrop={this.onImageDrop.bind(this)}>
-                                <p>Drop an image or click to select a file to upload.</p>
-                              </Dropzone>
-                            <small id="fileHelp" className="form-text text-muted">*Please add a picture of the listing*</small>
+                            <Dropzone multiple={false} accept="image/*" onDrop={this.onImageDrop.bind(this)}></Dropzone>
+                            <small id="fileHelp" className="form-text text-muted">*Drop an image or click to select a file to upload.*</small>
 
                         </div>
 
-                        <button type="submit" className="btn btn-primary">Save</button>
+                        <button type="Submit" className="btn btn-primary">Save</button>
                     </div>
+                    <img src={this.state.image_url}/>
                 </form>
             </div>
         );

@@ -14,12 +14,7 @@ class Home extends React.Component {
     };
 
     this.handleSearch = this.handleSearch.bind(this);
-    this.update = (address) => this.setState({ address })
-    this.getLatLongFromAddress = this.getLatLongFromAddress.bind(this);
-  }
-
-  getLatLongFromAddress(location) {
-    console.log(location);
+    this.update = (address) => this.setState({ address });
   }
 
   handleSearch(e) {
@@ -35,7 +30,7 @@ class Home extends React.Component {
         //   lat: lat,
         //   lng: lng
         // }
-        // console.log(`Yay! got latitude and longitude for ${ address }`, { lat, lng });
+        console.log(`Yay! got latitude and longitude for ${ address }`, { lat, lng });
       });
 
 
@@ -57,7 +52,7 @@ class Home extends React.Component {
           <form onSubmit={this.handleSearch}>
               <PlacesAutocomplete
                 style={{width: '90%'}}
-                value={this.state.searh_value}
+                value={this.state.search_value}
                 onChange={this.update}
               />
 
