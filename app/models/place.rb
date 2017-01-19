@@ -36,6 +36,14 @@ class Place < ActiveRecord::Base
   end
 
   def average_rating
-    
+    sum = 0
+    count = 0
+    self.reviews.each do |review|
+      count += 1
+      sum += review.rating
+    end
+
+    return sum.to_f / count if count != 0
+    nil
   end
 end

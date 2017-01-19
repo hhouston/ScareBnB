@@ -1,5 +1,7 @@
 import * as ReviewAPIUtil from '../util/review_api_util';
 
+import { fetchPlace } from './place_actions';
+
 export const RECEIVE_REVIEWS = 'RECEIVE_REVIEWS';
 export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 export const REMOVE_REVIEW = 'REMOVE_REVIEW';
@@ -9,7 +11,11 @@ export const CLEAR_REVIEW_ERRORS = "CLEAR_BOOKING_ERRORS";
 
 export const createReview = (newReview) => dispatch => (
   ReviewAPIUtil.createReview(newReview)
-    .then(review => dispatch(receiveReview(review)))
+    .then(review => {
+      dispatch(receiveReview(review));
+      dispatch(fetchPlace(review.place_id));
+    })
+
 );
 
 export const fetchReviews = (placeId) => dispatch => (
