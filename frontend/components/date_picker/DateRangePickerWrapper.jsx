@@ -1,5 +1,6 @@
 import React from 'react';
 import { DateRangePicker } from 'react-dates';
+import { withRouter } from 'react-router';
 
 class DateRangePickerWrapper extends React.Component {
   constructor(props) {
@@ -26,16 +27,14 @@ class DateRangePickerWrapper extends React.Component {
   handleSubmit(e) {
       e.preventDefault();
 
-      const booking = Object.assign({}, this.state, {
+      const booking = {
         place_id: this.props.placeId,
-        startDate: this.state.startDate._d,
-        endDate: this.state.endDate._d
-
-      });
-      debugger;
+        start_date: this.state.startDate._d,
+        end_date: this.state.endDate._d
+      };
 
       this.props.createBooking(booking).then(data => {
-          this.props.router.push(`/places/${data.place.id}`);
+          this.props.router.push(`/bookings`);
       });
   }
 
@@ -58,4 +57,4 @@ class DateRangePickerWrapper extends React.Component {
   }
 }
 
-export default DateRangePickerWrapper;
+export default withRouter(DateRangePickerWrapper);

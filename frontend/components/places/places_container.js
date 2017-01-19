@@ -6,7 +6,7 @@ import { asArray } from '../../reducers/selectors';
 
 const mapStateToProps = (state) => {
   return ({
-    places: asArray(state)
+    places: asArray(state.places)
   });
 };
 

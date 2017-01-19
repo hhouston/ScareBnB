@@ -5,10 +5,25 @@ class Api::BookingsController < ApplicationController
 
     @booking.guest_id = current_user.id
     if @booking.save
-      #render :show
+      render :show
     else
       render json: @place.errors.full_messages, status: 422
     end
+  end
+
+
+  def index
+    @bookings = Booking.where(guest_id: current_user.id)
+  end
+
+  def show
+    @booking = Booking.find(params[:id])
+  end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    render 'api/bookings/show'
   end
 
   private

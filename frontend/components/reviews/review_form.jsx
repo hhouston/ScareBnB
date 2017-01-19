@@ -30,8 +30,6 @@ class ReviewForm extends React.Component {
 
       const review = Object.assign({}, this.state, {
         place_id: this.props.place.id,
-        author_id: this.props.place.host_id
-        // TODO: fix: add currentUser
       });
 
 

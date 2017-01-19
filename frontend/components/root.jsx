@@ -9,6 +9,7 @@ import PlaceShowContainer from './places/place_show_container';
 import Home from './home/home';
 import SearchContainer from './search/search_container';
 import PlaceFormContainer from './places/place_form_container';
+import BookingsIndexContainer from './bookings/bookings_index_container';
 
 const Root = ({ store }) => {
 
@@ -27,6 +28,7 @@ const Root = ({ store }) => {
           <Route path="/places/:placeId" component={ PlaceShowContainer } />
           <Route path="/search" component={ SearchContainer } />
           <Route path="/new" component={ PlaceFormContainer } />
+          <Route path="/bookings" component={ BookingsIndexContainer } />
         </Route>
       </Router>
     </Provider>

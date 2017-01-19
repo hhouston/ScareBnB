@@ -1,6 +1,6 @@
 import React from 'react';
-import ReviewFormContainer from './review_form_container';
-import ReviewIndexItemContainer from './review_index_item_container';
+import ReviewFormContainer from '../reviews/review_form_container';
+import ReviewIndexItemContainer from '../reviews/review_index_item_container';
 import DateRangePickerWrapper from '../date_picker/DateRangePickerWrapper';
 
 class Place extends React.Component {
