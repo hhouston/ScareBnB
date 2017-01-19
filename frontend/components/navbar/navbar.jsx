@@ -27,10 +27,6 @@ const loggedIn = (currentUser, logout) => (
 
           <div className="collapse navbar-collapse" id="navbar-collapse">
               <form className="navbar-form navbar-left">
-                  <div className="form-group">
-                      <input type="text" className="form-control" placeholder="Search"/>
-                  </div>
-                  <button type="submit" className="btn btn-default">Submit</button>
               </form>
               <ul className="nav navbar-nav navbar-right">
                   <li>{currentUser.email}</li>

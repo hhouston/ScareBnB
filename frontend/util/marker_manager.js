@@ -20,7 +20,6 @@ export default class MarkerManager {
   }
 
   _placesToAdd() {
-    debugger
     const currentPlaces = this.markers.map( marker => marker.placeId );
     return this.places.filter( place => !currentPlaces.includes(place.id) );
   }

@@ -36,5 +36,6 @@ class Place < ActiveRecord::Base
   end
 
   def average_rating
+    
   end
 end
