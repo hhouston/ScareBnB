@@ -18,9 +18,9 @@ class BookingsIndex extends React.Component {
 
   render() {
     return(
-      <div className="featured-bookings-main">
+      <div className="bookings-main">
+        <h1 style={{marginLeft: "25px"}}>my bookings</h1>
           <div className="row">
-            <h1>my bookings</h1>
               {
                 this.props.bookings.map(booking =>
                   <div className="col-xs-12 col-sm-6 col-md-4" key={booking.id}>

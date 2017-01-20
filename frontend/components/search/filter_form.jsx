@@ -10,6 +10,7 @@ const FilterForm = ({maxGuest, updateFilter}) => (
 
         <div className="search-bar-container">
             <div className="location-container search-item">
+                Number of guests:
                 <input type="text" onChange={handleChange('searchValue', updateFilter)} className="form-control" placeholder="Search"/>
             </div>
 
@@ -19,9 +20,8 @@ const FilterForm = ({maxGuest, updateFilter}) => (
             </div>
 
             <div className="guests-container search-item">
+                Enter location:
                 <input type="number" value={maxGuest} onChange={handleChange('maxGuest', updateFilter)}/>
-
-                <button type="submit" className="btn btn-default">Submit</button>
             </div>
         </div>
     </div>

@@ -21,7 +21,7 @@ class PlaceForm extends React.Component {
             image_url: '',
             info: '',
             guests: 1,
-            place_type: '',
+            place_type: 'solo',
             uploadedFile: null
         };
 
@@ -66,7 +66,7 @@ class PlaceForm extends React.Component {
             guests: this.state.guests,
             place_type: this.state.place_type
         };
-        
+
         this.props.createPlace(place).then(data => {
             this.props.router.push(`/places/${data.place.id}`);
         });
@@ -86,7 +86,6 @@ class PlaceForm extends React.Component {
             }
 
             this.setState({lat: lat, long: lng});
-            console.log(`Yay! got latitude and longitude for ${address}`, {lat, lng});
         });
 
     }
@@ -134,8 +133,8 @@ class PlaceForm extends React.Component {
                               onChange={this.updateAddress}
                             />
 
-                            <button onClick={this.handleSearch} type="submit">Submit</button>
-
+                          <button onClick={this.handleSearch} type="submit">Submit</button>
+                          <p style={{fontSize: "85%"}}> (converts address to coordinates)</p>
                         </div>
 
                         <div className="form-group">

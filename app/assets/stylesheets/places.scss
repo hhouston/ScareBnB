@@ -24,6 +24,9 @@
   align-items: center;
 }
 
+.filter-section {
+  width: 100%;
+}
 .places-show-info {
   background-color: white;
   border: 1px solid grey;
@@ -40,4 +43,8 @@
 .booking-info-container {
   display: flex;
   justify-content: space-around;
+}
+
+.bookings-main {
+  margin-top: 60px;
 }

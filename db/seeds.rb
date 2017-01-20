@@ -75,14 +75,14 @@ Booking.create(
     {
       guest_id: 1,
       place_id: 1,
-      start_date: "1",
-      end_date: "2"
+      start_date: "2017-01-20",
+      end_date: "2018-04-22"
     },
     {
       guest_id: 1,
       place_id: 1,
-      start_date: "2",
-      end_date: "3"
+      start_date: "2017-01-20",
+      end_date: "2018-04-22"
     }
   ]
 )
