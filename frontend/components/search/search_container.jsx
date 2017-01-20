@@ -6,10 +6,10 @@ import { asArray } from '../../reducers/selectors';
 import Search from './search_map';
 
 const mapStateToProps = state => {
-  debugger;
   return ({
     places: asArray(state.places),
-    maxGuest: state.filters.maxGuest
+    maxGuest: state.filters.maxGuest,
+    searchValue: state.filters.searchValue
   });
 };
 

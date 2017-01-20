@@ -24,7 +24,6 @@ class Map extends React.Component {
   }
 
   componentDidUpdate() {
-    debugger;
     this.MarkerManager.updateMarkers(this.props.places);
   }
 

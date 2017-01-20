@@ -27,12 +27,11 @@ class Place < ActiveRecord::Base
 
   has_many :bookings
 
-  def self.in_bounds_max_guest(bounds, number_of_guests)
+  def self.in_bounds(bounds)
     self.where("lat < ?", bounds[:northEast][:lat])
         .where("lat > ?", bounds[:southWest][:lat])
         .where("long > ?", bounds[:southWest][:long])
         .where("long < ?", bounds[:northEast][:long])
-        .where("guests >= ?", number_of_guests)
   end
 
   def average_rating

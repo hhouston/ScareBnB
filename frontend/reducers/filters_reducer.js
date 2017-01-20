@@ -3,7 +3,8 @@ import merge from 'lodash/merge';
 
 const _defaultFilters = Object.freeze({
   bounds: {},
-  maxGuest: 0
+  maxGuest: 0,
+  searchValue: null
 });
 
 const FiltersReducer = (state = _defaultFilters, action) => {

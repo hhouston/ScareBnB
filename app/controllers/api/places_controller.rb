@@ -11,11 +11,16 @@ class Api::PlacesController < ApplicationController
   end
 
   def index
-    if params[:bounds] && params[:maxGuest]
-      places = Place.in_bounds_max_guest(params[:bounds], params[:maxGuest])
-    else
-      places = Place.all
+    places = params[:bounds] ? Place.in_bounds(params[:bounds]) : Place.all
+
+    places = places.where("guests >= ?", params[:maxGuest]) if params[:maxGuest]
+
+    if params[:searchValue] && params[:searchValue] != ""
+      searchValue = "%#{params[:searchValue].downcase}%"
+      places = places.where("LOWER(name) LIKE ? OR LOWER(location) LIKE ?", searchValue, searchValue )
+
     end
+
 
     @places = places.includes(:reviews)
   end

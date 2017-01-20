@@ -18,11 +18,13 @@ const FilterForm = ({ maxGuest, updateFilter }) => (
 
     <div className="form-group">
         <input type="text"
-                onChange={handleChange('maxGuest', updateFilter)}
+                onChange={handleChange('searchValue', updateFilter)}
                 className="form-control"
                 placeholder="Search"
         />
     </div>
+
+
     <button type="submit" className="btn btn-default">Submit</button>
 
   </div>
