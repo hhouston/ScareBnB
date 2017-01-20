@@ -1,16 +1,10 @@
-#ScareBnB
-
-[Heroku Link](https://scarebnb-aa.herokuapp.com/)
-
-[Trello Link](https://trello.com/b/gsUUCsuR/scarebnb)
-
 ## ScareBnB
 
-ScareBnB allows users to host or book haunted locations around the world. This website is a mobile first web application using Ruby on Rails for the backend with a Postgres DB. The frontend is built using ReactJS and JQuery.
+[ScareBnB](https://scarebnb-aa.herokuapp.com/) allows users to host or book haunted locations around the world. This website is a mobile first web application using Ruby on Rails for the backend with a Postgres DB. The frontend is built using ReactJS and JQuery.
 
 ScareBnB is a personal project by Hunter Houston
 
-- [ScareBnB Home Page: ]
+- [ScareBnB Home Page](./docs/images/home.png)
 
 - [ ] Hosting on Heroku
 - [ ] Create new accounts and login
