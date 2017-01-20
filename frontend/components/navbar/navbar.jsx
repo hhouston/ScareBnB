@@ -29,8 +29,8 @@ const loggedIn = (currentUser, logout) => (
               <form className="navbar-form navbar-left">
               </form>
               <ul className="nav navbar-nav navbar-right">
-                  <li>{currentUser.email}</li>
                   <li><a href="/#/new">Host</a></li>
+                  <li><a href="/#/bookings">Bookings</a></li>
                   <li><a href="#" onClick={logout}>Sign Out</a></li>
               </ul>
           </div>

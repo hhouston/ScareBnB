@@ -4,28 +4,24 @@ import PlacesIndexContainer from '../places/places_container';
 import FilterForm from './filter_form';
 
 class Search extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+    constructor(props) {
+        super(props);
+    }
 
-  render() {
-    return(
-      <div>
-        <h2>search</h2>
-        <FilterForm
-          updateFilter={this.props.updateFilter}
-          />
-        <PlacesIndexContainer />
-        <div className="map-right-side">
-          <Map
-            places={this.props.places}
-            updateFilter={this.props.updateFilter} />
-        </div>
+    render() {
+        return (
 
-        <h2>search</h2>
-      </div>
-    );
-  }
+            <div className="filter-section">
+                  <FilterForm updateFilter={this.props.updateFilter}/>
+                  <div className="map-top">
+                    <Map places={this.props.places} updateFilter={this.props.updateFilter}/>
+                  </div>
+                  <div className="filter-bottom">
+                        <PlacesIndexContainer/>
+                  </div>
+            </div>
+        );
+    }
 }
 
 export default Search;

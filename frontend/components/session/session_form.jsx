@@ -242,52 +242,6 @@ class SessionForm extends React.Component {
                 </form>
             </Modal>;
 
-            /*<div classNameName="signup-form">
-                    <br/>
-                      <div className="row signup-name">
-                        <span className="col-xs-12 col-sm-12 col-md-6 col-lg-6 fname"> First Name:
-                          <input type="text"
-                            value={this.state.fname}
-                            onChange={this.update("fname")}
-                            className="login-input" />
-                        </span>
-                        <span className="col-xs-12 col-sm-12 col-md-6 col-lg-6 lname"> Last Name:
-                          <input type="text"
-                            value={this.state.lname}
-                            onChange={this.update("lname")}
-                            className="login-input" />
-                        </span>
-                      </div>
-                      <div className="row">
-                        <span className="col-xs-12 col-sm-12 col-md-6 col-lg-6 fname">
-                          <label> Email:
-                            <input type="text"
-                              value={this.state.email}
-                              onChange={this.update("email")}
-                              className="signup-input" />
-                          </label>
-                          <br/>
-                          </span>
-                          <span className="col-xs-12 col-sm-12 col-md-6 col-lg-6 fname">
-                            <label> Password:
-                              <input type="password"
-                                value={this.state.password}
-                                onChange={this.update("password")}
-                                className="signup-input" />
-                            </label>
-                          </span>
-                      </div>
-                    <br/>
-
-                    <input type="submit" value="Submit" />
-                  </div>
-                </form>
-                <div className="signup-submit" style={{display: 'flex'}}>
-                  <p>Already have an account? {loginButton}</p>
-                </div>
-
-                */
-            // </Modal>;
         }
         return (
             <div>
@@ -307,7 +261,7 @@ class SessionForm extends React.Component {
 
                         <div className="collapse navbar-collapse" id="navbar-collapse">
                             <form className="navbar-form navbar-left">
-                              
+
                             </form>
                             <ul className="nav navbar-nav navbar-right">
                                 <li>{hostLink}</li>

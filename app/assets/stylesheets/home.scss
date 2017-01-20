@@ -1,0 +1,86 @@
+.splash-page {
+  display: block;
+}
+
+.splash-img {
+  width: 100%;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-attachment: fixed;
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 25% 30%;
+
+  margin-top: 30px;
+  // position: fixed;
+
+  // background-color: red;
+  // overflow: scroll;
+  // background-image: url("https://res.cloudinary.com/drhenvicq/image/upload/v1484764304/1ip1dozvo8i-andrea-boldizsar_p0ensb.jpg")
+  // background-image: url("https://res.cloudinary.com/drhenvicq/image/upload/v1484907909/ghost-icon-12472_ourofi.png");
+}
+
+.splash-title {
+  width: 100%;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 550px;
+
+  padding-left: 200px;
+  padding-right: 200px;
+  margin-top: 50px;
+  color: white
+}
+
+.splash-title > span {
+  position: block;
+  color: white;
+  font-size: 150%;
+}
+
+.scarebnb-title {
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: center;
+  position: fixed;
+}
+
+.place-types {
+  padding-top: 50px;
+  background-color: white;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+
+
+.featured-places-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.featured-places-thumbnail {
+  min-height: 210px;
+}
+
+.inline-row {
+  display: flex;
+  align-items: center;
+}

@@ -17,7 +17,7 @@ class Api::PlacesController < ApplicationController
 
     if params[:searchValue] && params[:searchValue] != ""
       searchValue = "%#{params[:searchValue].downcase}%"
-      places = places.where("LOWER(name) LIKE ? OR LOWER(location) LIKE ?", searchValue, searchValue )
+      places = places.where("LOWER(name) LIKE ? OR LOWER(location) LIKE ?", searchValue, searchValue)
 
     end
 

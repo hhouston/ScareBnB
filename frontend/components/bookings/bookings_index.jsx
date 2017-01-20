@@ -1,9 +1,15 @@
 import React from 'react';
-import { withRouter } from 'react-router';
+import { withRouter, hashHistory } from 'react-router';
 
 class BookingsIndex extends React.Component {
   constructor(props) {
     super(props);
+
+    this.showLink = this.showLink.bind(this);
+  }
+
+  showLink(booking) {
+    return () => hashHistory.push(`places/${booking.id}`);
   }
 
   componentWillMount() {
@@ -18,14 +24,17 @@ class BookingsIndex extends React.Component {
               {
                 this.props.bookings.map(booking =>
                   <div className="col-xs-12 col-sm-6 col-md-4" key={booking.id}>
-                    <div className="thumbnail" style={{height: '400px'}} >
+
+                    <div onClick={this.showLink(booking)} className="thumbnail" style={{height: '400px'}} >
                       <img src={booking.image_url} alt="image not available" />
                       <div className="caption">
                         <h2>{booking.name}</h2>
                         <p>{booking.info}</p>
                         <p>Price: ${booking.price}/night</p>
-                        <p>Rating: {booking.rating}</p>
-                        <p>MaxCapacity: {booking.guests}</p>
+                        <p>Start: {booking.start_date}</p>
+                        <p>End: {booking.end_date}</p>
+                        <p>Max Capacity: {booking.guests}</p>
+
                         <p>
                           <button onClick={() => this.props.deleteBooking(booking.id)}>Delete</button>
                         </p>

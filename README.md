@@ -4,9 +4,13 @@
 
 [Trello Link](https://trello.com/b/gsUUCsuR/scarebnb)
 
-## Minimum Viable Product
+## ScareBnB
 
 ScareBnB allows users to host or book haunted locations around the world. This website is a mobile first web application using Ruby on Rails for the backend with a Postgres DB. The frontend is built using ReactJS and JQuery.
+
+ScareBnB is a personal project by Hunter Houston
+
+- [ScareBnB Home Page: ]
 
 - [ ] Hosting on Heroku
 - [ ] Create new accounts and login

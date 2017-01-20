@@ -10,13 +10,13 @@ const _getCoordsObj = latLong => ({
 
 let mapOptions = {
       center: { lat: 37.7758, lng: -122.435 },
-      zoom: 13
+      zoom: 13,
+      scrollwheel: false
 };
 
 class Map extends React.Component {
   componentDidMount() {
     const map = this.refs.map;
-    // wrap the mapDOMNode in a Google Map
     this.map = new google.maps.Map(map, mapOptions);
     this.MarkerManager = new MarkerManager(this.map, this._handleMarkerClick.bind(this));
     this._registerListeners();
@@ -55,7 +55,11 @@ class Map extends React.Component {
   // }
 
   render() {
-    return <div id="map-container" ref="map">Map</div>;
+    return (
+      <div className="map-frame">
+          <div style={{width: "100%"}} id="map-container" ref="map">Map</div>
+    </div>
+    );
   }
 }
 

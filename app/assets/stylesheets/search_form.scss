@@ -1,0 +1,51 @@
+.home-search-container {
+  width: 100%;
+  height: 1000px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.search-bar-container {
+  height: 100px;
+  background-color: black;
+  width: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.location-container {
+  background-color: red;
+}
+
+.calender-container {
+  background-color: white;
+}
+.guests-container {
+  background-color: blue;
+
+}
+
+.search-item {
+  width: 33.33%;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+
+  border: 3px solid black;
+}
+
+.map-top {
+  width: 100%;
+}
+
+#map-canvas{
+    height: 100%;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+}

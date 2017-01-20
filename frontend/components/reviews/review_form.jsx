@@ -42,9 +42,12 @@ class ReviewForm extends React.Component {
 
     render() {
 
+      if (this.props.reviewed) {
+        return <div></div>;
+      }
         return (
 
-          
+
             <div>
                 <form onSubmit={this.handleSubmit} className="create-review-form">
 

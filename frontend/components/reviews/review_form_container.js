@@ -3,9 +3,12 @@ import ReviewForm from './review_form';
 
 import { createReview } from '../../actions/review_actions';
 
+import { reviewedPlace } from '../../reducers/selectors';
+
 const mapStateToProps = (state) => {
   return ({
-    place: state.place
+    place: state.place,
+    reviewed: reviewedPlace(state.reviews, state.session.currentUser )
   });
 };
 

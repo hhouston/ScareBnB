@@ -1,4 +1,7 @@
 import PlacesIndexContainer from '../places/places_container';
+import FeaturedPlaces from '../home/featured_places';
+import SearchForm from '../search/SearchForm';
+
 import React from 'react';
 
 class Home extends React.Component {
@@ -9,19 +12,24 @@ class Home extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className="splash-page">
 
-        <div className="splash-img">
-          <h2>Enter if you dare..</h2>
+          <section className="splash-img">
+            <div className="splash-title">
 
-          <div className="featured-places">
-            <div className="featured-places-bg">
-              <PlacesIndexContainer />
-            </div>
-          </div>
-        </div>
+                <h2 className="scarebnb-title">
+                  <span>ScareBnB </span>
+                  <p>a mobile friendly site to book spooky adventures.</p>
+                </h2>
+              </div>
+          </section>
 
+          <section className="home-content">
+              <FeaturedPlaces />
+          </section>
 
+          <section className="home-search-container">
+          </section>
 
       </div>
     );
