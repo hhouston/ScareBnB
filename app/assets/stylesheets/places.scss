@@ -1,3 +1,43 @@
 // Place all the styles related to the places controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.places-show-thumbnail {
+  margin-top: 50px;
+  text-align: center;
+
+}
+
+.places-show {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+
+.date-range-picker {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.places-show-info {
+  background-color: white;
+  border: 1px solid grey;
+  width: 90%;
+}
+
+.center-caption {
+  text-align: center;
+}
+
+.booking-thumbnail-img {
+  max-width: 70%;
+}
+.booking-info-container {
+  display: flex;
+  justify-content: space-around;
+}

@@ -25,19 +25,31 @@ class BookingsIndex extends React.Component {
                 this.props.bookings.map(booking =>
                   <div className="col-xs-12 col-sm-6 col-md-4" key={booking.id}>
 
-                    <div onClick={this.showLink(booking)} className="thumbnail" style={{height: '400px'}} >
-                      <img src={booking.image_url} alt="image not available" />
-                      <div className="caption">
-                        <h2>{booking.name}</h2>
-                        <p>{booking.info}</p>
-                        <p>Price: ${booking.price}/night</p>
-                        <p>Start: {booking.start_date}</p>
-                        <p>End: {booking.end_date}</p>
-                        <p>Max Capacity: {booking.guests}</p>
+                    <div onClick={this.showLink(booking)} className="thumbnail booking-thumbnail" style={{height: '400px'}} >
+                      <img src={booking.image_url} alt="image not available"  className="booking-thumbnail-img"/>
+                      <div className="caption center-caption">
+
+                        <div>
+
+                          <h2>{booking.name}</h2>
+                        </div>
+                        <div className='booking-info-container'>
+                            <div >
+
+                                <p>Price: ${booking.price}/night</p>
+                                <p>Start: {booking.start_date}</p>
+                            </div>
+                            <div>
+                                <p>Max Capacity: {booking.guests}</p>
+                                <p>End: {booking.end_date}</p>
+                            </div>
+                      </div>
 
                         <p>
                           <button onClick={() => this.props.deleteBooking(booking.id)}>Delete</button>
                         </p>
+
+
                       </div>
                     </div>
                   </div>

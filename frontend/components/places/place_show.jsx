@@ -22,14 +22,13 @@ class Place extends React.Component {
       reviews = "Be the first to review this place!";
     }
     return(
-      <div>
+      <div className="places-show">
         <div className="row">
           <div className="col-xs-12 col-md-12 col-lg-12">
-            <div className="thumbnail">
+            <div className="thumbnail places-show-thumbnail">
               <img src={this.props.place.image_url} alt="Image Not Available" />
               <div className="caption">
                 <h3>{this.props.place.name}</h3>
-                <p>{this.props.place.info}</p>
               </div>
             </div>
           </div>
@@ -39,15 +38,17 @@ class Place extends React.Component {
           createBooking={this.props.createBooking}
           placeId={this.props.place.id}
         />
+        <br />
 
         {
-          this.props.place.name
+          <div className="places-show-info">
+            <p>{this.props.place.info}</p>
+          </div>
         }
 
         { this.props.currentUser ? <ReviewFormContainer reviews={reviews}/> : "" }
 
         <div>
-          <h1>Reviews</h1>
             {reviews}
         </div>
       </div>

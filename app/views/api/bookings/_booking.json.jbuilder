@@ -4,3 +4,4 @@ json.extract! booking, :id, :start_date, :end_date,
 json.set! :image_url, booking.place.image_url
 json.set! :price, booking.place.price
 json.set! :guests, booking.place.guests
+json.set! :name, booking.place.name

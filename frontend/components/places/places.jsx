@@ -20,22 +20,23 @@ class Places extends React.Component {
                     {this.props.places.map(place => <div className="col-xs-12 col-sm-6 col-md-3 col-lg-2" key={place.id}>
                         <div className="thumbnail">
                             <a href={`#/places/${place.id}`}><img className="thumbnail-img" src={place.image_url} alt="image not available"/></a>
-                            <div ></div>
+                              <div className="caption center-caption">
 
-                                <div className="places-item-name">
-                                    <h2>{place.name}</h2>
+                                    <div className="places-item-name">
+                                        <h2>{place.name}</h2>
 
-                                </div>
+                                    </div>
 
-                                <div className="">
-                                    <p>{place.location}</p>
-                                    <p>Price: ${place.price}/night</p>
-                                    <p>Rating: {place.rating}</p>
-                                </div>
+                                    <div className="">
+                                        <p>{place.location}</p>
+                                        <p>Price: ${place.price}/night</p>
+                                        <p>Rating: {place.rating}</p>
+                                    </div>
 
-                                <p>
-                                    <a href={`#/places/${place.id}`} className="btn btn-primary" role="button">Book</a>
-                                </p>
+                                    <p>
+                                        <a href={`#/places/${place.id}`} className="btn btn-primary" role="button">Book</a>
+                                    </p>
+                              </div>
 
                         </div>
                     </div>)

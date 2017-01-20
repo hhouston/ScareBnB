@@ -11,9 +11,17 @@ class ReviewIndexItem extends React.Component {
       userId = this.props.currentUser.id;
     }
     return(
+
       <div className="review-index-item">
-        <p>{this.props.review.text}</p>
-        <span>{this.props.review.fname}</span>
+          <h4>Reviews</h4>
+
+          <span>{this.props.review.fname} - Rating: {this.props.review.rating}</span>
+          <span>{this.props.review.rating}</span>
+
+          <div className="review-body">
+
+          <p>{this.props.review.text}</p>
+        </div>
         {
           this.props.review.author_id === userId ? <button onClick={() => this.props.deleteReview(this.props.review.id)}>Delete</button> : ""
         }

@@ -13,12 +13,16 @@ ScareBnB is a personal project by Hunter Houston
 
 ![ScareBnB Home Page][home page]
 
+## Place
+
+![Detail Page][place show]
+
 ## Features
 
-- [ ] Hosting on Heroku
-- [ ] Create new accounts and login
-- [ ] Hosting for Places
-- [ ] Bookings for Places
+- Hosting on Heroku
+- Create new accounts and login
+- Hosting for Place
+- Bookings for Places
 - Search (by Location & Availability) with Google Maps
 - Reviews
 
@@ -30,3 +34,4 @@ ScareBnB is a personal project by Hunter Houston
 * [Sample State](sample-state.md)
 
 [home page]: ./docs/images/home.png "ScareBnB Home Page"
+[place show]: ./docs/images/place_show.png "Place Detail Page"
