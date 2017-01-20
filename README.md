@@ -4,7 +4,7 @@
 
 ScareBnB is a personal project by Hunter Houston
 
-- [ScareBnB Home Page][home page]
+![ScareBnB Home Page][home page]
 
 - [ ] Hosting on Heroku
 - [ ] Create new accounts and login
@@ -53,4 +53,4 @@ ScareBnB is a personal project by Hunter Houston
 - [ ] Messaging
 - [ ] Email auth
 
-[home page]: ./docs/images/home.png
+[home page]: ./docs/images/home.png "ScareBnB Home Page"
