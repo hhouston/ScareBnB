@@ -11,7 +11,7 @@ const FilterForm = ({maxGuest, updateFilter}) => (
 
         <div className="search-bar-container">
             <div className="location-container search-item">
-                Enter Location:
+                Enter Keyword:
                 <input type="text" onChange={handleChange('searchValue', updateFilter)} className="form-control" placeholder="Search"/>
             </div>
 
