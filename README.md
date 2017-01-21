@@ -40,5 +40,5 @@ ScareBnB is a personal project by Hunter Houston
 * [Sample State](sample-state.md)
 
 [home page]: ./docs/images/home.png "ScareBnB Home Page"
-[place show]: ./docs/images/place_show.png "Place Detail Page"
+[place show]: ./docs/images/place-show.png "Place Detail Page"
 [search]: ./docs/images/search.png "Search"
