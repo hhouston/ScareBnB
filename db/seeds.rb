@@ -33,7 +33,7 @@ Place.create(
       lat: 37.826969,
       long: -122.422709,
       image_url: "https://www.familytree.com/wp-content/uploads/2014/04/alcatraz.jpg",
-      info: "this was a prison",
+      info: "this was a prison. Alcatraz Island is located in the San Francisco Bay, 1.25 miles (2.01 km) offshore from San Francisco, California, United States.[2] The small island was developed with facilities for a lighthouse, a military fortification, a military prison (1868), and a federal prison from 1933 until 1963.[5] Beginning in November 1969, the island was occupied for more than 19 months by a group of aboriginal people from San Francisco who were part of a wave of Native activism across the nation with public protests through the 1970s. In 1972, Alcatraz became a national recreation area and received designation as a National Historic Landmark in 1986.",
       guests: 3,
       place_type: "place"
     },
@@ -46,7 +46,7 @@ Place.create(
       lat: 37.802289,
       long: -122.405773,
       image_url: "https://res.cloudinary.com/drhenvicq/image/upload/v1484611641/coit_tower_red_and_gold_thumb_evruwf.jpg",
-      info: "firehose building",
+      info: "Coit Tower, also known as the Lillian Coit Memorial Tower, is a 210-foot (64 m) tower in the Telegraph Hill neighborhood of San Francisco, California. The tower, in the city's Pioneer Park, was built in 1933 using Lillie Hitchcock Coit's bequest to beautify the city of San Francisco; at her death in 1929 Coit left one-third of her estate to the city for civic beautification. The tower was proposed in 1931 as an appropriate use of Coit's gift. It was added to the National Register of Historic Places on January 29, 2008.[1]",
       guests: 5,
       place_type: "experience"
     },
