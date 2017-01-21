@@ -16,7 +16,6 @@ class Places extends React.Component {
         return (
             <div className="featured-places-main">
                 <div className="row form-inline">
-                    <h1>featured places</h1>
                     {this.props.places.map(place => <div className="col-xs-12 col-sm-6 col-md-3 col-lg-2" key={place.id}>
                         <div className="thumbnail">
                             <a href={`#/places/${place.id}`}><img className="thumbnail-img" src={place.image_url} alt="image not available"/></a>

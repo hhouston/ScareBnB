@@ -1,4 +1,5 @@
 const React = require('react');
+import DateRangePickerWrapper from '../date_picker/DateRangePickerWrapper';
 
 const handleChange = (filter, updateFilter) => (e => updateFilter(filter, e.currentTarget.value));
 
@@ -15,7 +16,6 @@ const FilterForm = ({maxGuest, updateFilter}) => (
             </div>
 
             <div className="calender-container search-item">
-                <h1>cal</h1>
 
             </div>
 
