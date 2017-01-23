@@ -8,7 +8,7 @@ class BookingsIndex extends React.Component {
   }
 
   showLink(booking) {
-    return () => hashHistory.push(`places/${booking.id}`);
+    return () => hashHistory.push(`places/${booking.place_id}`);
   }
 
   componentWillMount() {
