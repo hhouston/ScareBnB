@@ -21,7 +21,7 @@ const FilterForm = ({maxGuest, updateFilter}) => (
 
             <div className="guests-container search-item">
               Number of guests:
-                <input type="number" value={maxGuest} onChange={handleChange('maxGuest', updateFilter)}/>
+                <input min="0" type="number" value={maxGuest} onChange={handleChange('maxGuest', updateFilter)}/>
             </div>
         </div>
     </div>

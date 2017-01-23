@@ -1,6 +1,5 @@
 import React from 'react';
 import { withRouter, hashHistory } from 'react-router';
-
 class BookingsIndex extends React.Component {
   constructor(props) {
     super(props);
@@ -26,6 +25,9 @@ class BookingsIndex extends React.Component {
                   <div className="col-xs-12 col-sm-6 col-md-4" key={booking.id}>
 
                     <div onClick={this.showLink(booking)} className="thumbnail booking-thumbnail" style={{height: '400px'}} >
+                      <p style={{float: "right"}}>
+                        <button onClick={() => this.props.deleteBooking(booking.id)}>Delete</button>
+                      </p>
                       <img src={booking.image_url} alt="image not available"  className="booking-thumbnail-img"/>
                       <div className="caption center-caption">
 
@@ -34,7 +36,7 @@ class BookingsIndex extends React.Component {
                           <h2>{booking.name}</h2>
                         </div>
                         <div className='booking-info-container'>
-                            <div >
+                            <div className="places-item-name">
 
                                 <p>Price: ${booking.price}/night</p>
                                 <p>Start: {booking.start_date}</p>
@@ -45,9 +47,6 @@ class BookingsIndex extends React.Component {
                             </div>
                       </div>
 
-                        <p>
-                          <button onClick={() => this.props.deleteBooking(booking.id)}>Delete</button>
-                        </p>
 
 
                       </div>

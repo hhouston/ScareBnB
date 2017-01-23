@@ -25,9 +25,7 @@ class FeaturedPlaces extends React.Component {
               <div className="featured-item col-xs-12 col-sm-12 col-md-3 col-lg-3" key={1}>
                 <div className="thumbnail" >
 
-                  <a href={`#/search/house`}>
                     <img className="featured-places-thumbnail" src={house_image} alt="image not available"/>
-                  </a>
                   <h2 className="text-center">Haunted House</h2>
 
                   <div className="house-item">
@@ -36,7 +34,7 @@ class FeaturedPlaces extends React.Component {
               </div>
               <div className="featured-item col-xs-12 col-sm-12 col-md-3 col-lg-3" key={2}>
                 <div className="thumbnail">
-                  <a href={`#/search/solo`}><img className="featured-places-thumbnail" src={solo_image} alt="image not available"/></a>
+                  <img className="featured-places-thumbnail" src={solo_image} alt="image not available"/>
                   <div className="solo-item">
                     <h2 className="text-center">SOLO</h2>
                   </div>
@@ -44,7 +42,7 @@ class FeaturedPlaces extends React.Component {
               </div>
               <div className="featured-item col-xs-12 col-sm-12 col-md-3 col-lg-3" key={3}>
                 <div className="thumbnail">
-                  <a href={`#/search/experiences`}><img className="featured-places-thumbnail" src={exp_image} alt="image not available"/></a>
+                  <img className="featured-places-thumbnail" src={exp_image} alt="image not available"/>
                   <div className="experience-item">
                     <h2 className="text-center">Experiences</h2>
                   </div>
