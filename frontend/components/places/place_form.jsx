@@ -99,7 +99,7 @@ class PlaceForm extends React.Component {
 
                     <div className="new-listing-container">
                       <br />
-                      <h2>Add a Place (**be sure to fill everything out Quinn!)</h2>
+                      <h2>Add a Place (**be sure to fill out each form**)</h2>
                         <div className="form-group">
                             <label>Listing Name:</label>
                             <input type="text" value={this.state.name} className="form-control" placeholder="Name" onChange={this.update('name')}/>
