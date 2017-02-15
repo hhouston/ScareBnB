@@ -18,15 +18,16 @@
    font-family: 'Open Sans', sans-serif;
 }
 
+
 html, body {
   margin: 0;
   overflow-x: hidden;
+  background-color: #F8F8FF;
 }
 
 html, body, .app, #root {
   height: 100%;
   width: 100%;
-  background-color: #F8F8FF;
 }
 
 // TODO: DELETE 500x500

@@ -71,14 +71,8 @@ class ReviewForm extends React.Component {
     }
 
     update(property) {
-
-        return e => {
-          console.log(e.target.value);
-          this.setState(
-          {
-            [property]: e.target.value
-          }
-        );
+      return e => {
+        this.setState({[property]: e.target.value});
       };
     }
 
@@ -107,15 +101,11 @@ class ReviewForm extends React.Component {
         return <div></div>;
       }
         return (
-
-
             <div>
               <div className="container">
               	<div className="row" style={{marginTop:"40px",display:"flex", justifyContent:"center"}}>
               		<div className="col-md-12">
                   	<div className="well well-sm">
-
-
                           <div className="row" id="post-review-box">
                               <div className="col-md-12">
                                   <form acceptCharset="UTF-8" onSubmit={this.handleSubmit}>

@@ -29,6 +29,8 @@ class Place extends React.Component {
               <img src={this.props.place.image_url} alt="Image Not Available" />
               <div className="caption">
                 <h3>{this.props.place.name}</h3>
+                <p>{this.props.place.info}</p>
+
               </div>
             </div>
           </div>
@@ -40,16 +42,13 @@ class Place extends React.Component {
           currentUser={this.props.currentUser}
         />
         <br />
-
-        {
-          <div className="places-show-info">
-            <p>{this.props.place.info}</p>
-          </div>
-        }
-
         <ReviewFormContainer reviews={reviews}/>
 
         <div>
+            <hr></hr>
+            <br />
+            <h2 style={{textAlign:"center"}}>Reviews</h2>
+
             {reviews}
         </div>
       </div>

@@ -13,18 +13,14 @@ class ReviewIndexItem extends React.Component {
     return(
 
       <div className="review-index-item">
-          <h4>Reviews</h4>
-
-          <span>{this.props.review.fname} - Rating: {this.props.review.rating}</span>
-          <span>{this.props.review.rating}</span>
-
-          <div className="review-body">
-
-          <p>{this.props.review.text}</p>
-        </div>
-        {
-          this.props.review.author_id === userId ? <button onClick={() => this.props.deleteReview(this.props.review.id)}>Delete</button> : ""
-        }
+          <h2>{this.props.review.fname}</h2>
+          <div className="stars starrr" data-rating={this.props.review.rating}></div>
+          <div className="container">
+              {
+                this.props.review.author_id === userId ? <a onClick={() => this.props.deleteReview(this.props.review.id)} className="glyphicon glyphicon-remove" style={{float: "right"}}></a> : ""
+              }
+              <pre>{this.props.review.text}</pre>
+          </div>
       </div>
     );
   }
