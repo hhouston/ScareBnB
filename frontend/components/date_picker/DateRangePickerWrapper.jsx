@@ -1,6 +1,8 @@
 import React from 'react';
 import { DateRangePicker } from 'react-dates';
 import { withRouter } from 'react-router';
+import Button from 'react-bootstrap/lib/Button';
+import Alert from 'react-bootstrap/lib/Alert';
 
 class DateRangePickerWrapper extends React.Component {
   constructor(props) {
@@ -39,19 +41,30 @@ class DateRangePickerWrapper extends React.Component {
   }
 
   render() {
+    let bookButton;
+
+    if (this.props.currentUser === null || this.state.startDate === null || this.state.endDate) {
+      bookButton = <Button onClick={this.handleSubmit} disabled={true} className="btn btn-primary" type="button">Book</Button>;
+    } else {
+      bookButton = <Button type="button" className="btn btn-primary">Book</Button>;
+
+    }
+
     const { focusedInput, startDate, endDate } = this.state;
     return (
       <div className="date-range-picker">
-        <DateRangePicker
-          {...this.props}
-          onDatesChange={this.onDatesChange}
-          onFocusChange={this.onFocusChange}
-          focusedInput={focusedInput}
-          startDate={startDate}
-          endDate={endDate}
-        />
-      <br />
-      <button onClick={this.handleSubmit}>Book</button>
+          <DateRangePicker
+            {...this.props}
+            onDatesChange={this.onDatesChange}
+            onFocusChange={this.onFocusChange}
+            focusedInput={focusedInput}
+            startDate={startDate}
+            endDate={endDate}
+          />
+          <br />
+          {bookButton}
+
+
       </div>
     );
   }

@@ -219,7 +219,6 @@ class SessionForm extends React.Component {
 
                             </form>
                             <ul className="nav navbar-nav navbar-right">
-                                <li>{hostLink}</li>
                                 <li>{demoLink}</li>
                                 <li>{loginLink}</li>
                                 <li>{signUpLink}</li>

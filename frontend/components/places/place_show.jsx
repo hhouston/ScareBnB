@@ -37,6 +37,7 @@ class Place extends React.Component {
         <DateRangePickerWrapper
           createBooking={this.props.createBooking}
           placeId={this.props.place.id}
+          currentUser={this.props.currentUser}
         />
         <br />
 
