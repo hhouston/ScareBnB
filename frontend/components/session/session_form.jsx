@@ -122,7 +122,7 @@ class SessionForm extends React.Component {
         const demoButton = <Button bsStyle="primary" bsSize="sm" onClick={this.demoLogin}>
             Demo
         </Button>;
-        const demoLink = <a href="#" onClick={this.demoLogin}>Demo</a>;
+        const demoLink = <a onClick={this.demoLogin}>Demo</a>;
 
         const hostLink = <a href="/#/new">Host</a>;
 

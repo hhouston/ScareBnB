@@ -47,7 +47,7 @@ class Place extends React.Component {
           </div>
         }
 
-        { this.props.currentUser ? <ReviewFormContainer reviews={reviews}/> : "" }
+        <ReviewFormContainer reviews={reviews}/>
 
         <div>
             {reviews}

@@ -29,21 +29,26 @@ class DateRangePickerWrapper extends React.Component {
   handleSubmit(e) {
       e.preventDefault();
 
-      const booking = {
-        place_id: this.props.placeId,
-        start_date: this.state.startDate._d,
-        end_date: this.state.endDate._d
-      };
+      if (this.state.startDate === null || this.state.endDate) {
+        return <Alert>Please choose dates</Alert>;
+      } else {
+        const booking = {
+          place_id: this.props.placeId,
+          start_date: this.state.startDate._d,
+          end_date: this.state.endDate._d
+        };
 
-      this.props.createBooking(booking).then(data => {
+        this.props.createBooking(booking).then(data => {
           this.props.router.push(`/bookings`);
-      });
+        });
+
+      }
   }
 
   render() {
     let bookButton;
 
-    if (this.props.currentUser === null || this.state.startDate === null || this.state.endDate) {
+    if (this.props.currentUser === null) {
       bookButton = <Button onClick={this.handleSubmit} disabled={true} className="btn btn-primary" type="button">Book</Button>;
     } else {
       bookButton = <Button type="button" className="btn btn-primary">Book</Button>;
@@ -63,8 +68,6 @@ class DateRangePickerWrapper extends React.Component {
           />
           <br />
           {bookButton}
-
-
       </div>
     );
   }

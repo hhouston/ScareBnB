@@ -8,7 +8,8 @@ import { reviewedPlace } from '../../reducers/selectors';
 const mapStateToProps = (state) => {
   return ({
     place: state.place,
-    reviewed: reviewedPlace(state.reviews, state.session.currentUser )
+    reviewed: reviewedPlace(state.reviews, state.session.currentUser ),
+    loggedIn: state.session.currentUser ? true : false
   });
 };
 
