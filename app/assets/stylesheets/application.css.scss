@@ -31,8 +31,8 @@ html, body, .app, #root {
 
 // TODO: DELETE 500x500
 #map-container {
-  width: 500px;
-  height: 500px;
+  width: 100%;
+  height: 700px;
 }
 
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"

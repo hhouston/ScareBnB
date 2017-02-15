@@ -15,9 +15,9 @@ class Places extends React.Component {
 
         return (
             <div className="featured-places-main">
-                <div className="places">
+                <div className="places row">
                     {this.props.places.map(place => <div className="" key={place.id}>
-                        <div className="thumbnail">
+                        <div className="thumbnail col-lg-6 col-md-6 col-sm-12 col-xs-12">
                             <a href={`#/places/${place.id}`}><img className="thumbnail-img" src={place.image_url} alt="image not available"/></a>
                               <div className="caption center-caption">
 
@@ -31,7 +31,6 @@ class Places extends React.Component {
                                         <p>Rating: {place.rating}</p>
                                     </div>
                               </div>
-
                         </div>
                     </div>)
 }
