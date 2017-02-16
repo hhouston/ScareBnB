@@ -90,7 +90,7 @@ class ReviewForm extends React.Component {
                               <div className="col-md-12">
                                   <form acceptCharset="UTF-8" onSubmit={this.handleSubmit}>
                                       <input id="ratings-hidden" name="rating" type="hidden" value={this.state.rating} onChange={this.update('rating')}/>
-                                      <Rater size={10} rating={this.state.rating} onRate={this.handleRate.bind(this)} />
+                                      <Rater rating={this.state.rating} onRate={this.handleRate.bind(this)} />
 
                                       <br />
                                       <textarea className="form-control animated" value={this.state.text} onChange={this.update('text')} cols="50" id="new-review" name="comment" placeholder="Enter your review here..." rows="5"></textarea>
