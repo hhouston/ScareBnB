@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter, hashHistory } from 'react-router';
+import {Button} from 'react-bootstrap';
 class BookingsIndex extends React.Component {
   constructor(props) {
     super(props);
@@ -17,18 +18,16 @@ class BookingsIndex extends React.Component {
 
   render() {
     return(
-      <div className="bookings-main">
-        <h1 style={{marginLeft: "25px"}}>my bookings</h1>
+      <div className="featured-places-main">
+        <h1 style={{marginLeft: "25px", marginTop:"50px", textAlign: "center"}}>Current Bookings</h1>
           <div className="row">
               {
-                this.props.bookings.map(booking =>
-                  <div className="col-xs-12 col-sm-6 col-md-4" key={booking.id}>
+                this.props.bookings.map(booking => <div key={booking.id}>
 
-                    <div onClick={this.showLink(booking)} className="thumbnail booking-thumbnail" style={{height: '400px'}} >
+                    <div onClick={this.showLink(booking)} className="thumbnail col-xs-12 col-sm-6 col-md-4" style={{height: '400px'}} >
                       <p style={{float: "right"}}>
-                        <button onClick={() => this.props.deleteBooking(booking.id)}>Delete</button>
                       </p>
-                      <img src={booking.image_url} alt="image not available"  className="booking-thumbnail-img"/>
+                      <img src={booking.image_url} alt="image not available"  className="thumbnail-img" style={{maxWidth:"250px"}}/>
                       <div className="caption center-caption">
 
                         <div>
@@ -37,7 +36,6 @@ class BookingsIndex extends React.Component {
                         </div>
                         <div className='booking-info-container'>
                             <div className="places-item-name">
-
                                 <p>Price: ${booking.price}/night</p>
                                 <p>Start: {booking.start_date}</p>
                             </div>
@@ -47,7 +45,8 @@ class BookingsIndex extends React.Component {
                             </div>
                       </div>
 
-
+                      <br />
+                      <Button className="btn btn-danger" onClick={() => this.props.deleteBooking(booking.id)}>Delete</Button>
 
                       </div>
                     </div>

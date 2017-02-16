@@ -10,7 +10,7 @@ const _getCoordsObj = latLong => ({
 
 let mapOptions = {
       center: { lat: 37.7758, lng: -122.435 },
-      zoom: 13,
+      zoom: 5,
       scrollwheel: false
 };
 
