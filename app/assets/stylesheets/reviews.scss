@@ -15,3 +15,21 @@
   padding-left: 90px;
   padding-right: 90px;
 }
+
+.react-rater a{
+  color: grey;
+  font-size: 30px;
+}
+
+.is-active {
+  color: gold !important;
+}
+
+.will-be-active {
+  color: gold !important;
+}
+
+
+$react-rater-link: #ccc !default;   // color of star not rated
+$react-rater-hover: #666 !default;  // color of star on hover
+$react-rater-active: #000 !default; // color of star rated }
