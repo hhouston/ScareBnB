@@ -1,6 +1,7 @@
 import React from 'react';
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
+import { Button } from 'react-bootstrap';
 
 import {withRouter} from 'react-router';
 import PlacesAutocomplete, {geocodeByAddress} from 'react-places-autocomplete';
@@ -17,8 +18,8 @@ class PlaceFormStep extends React.Component {
             name: '',
             address: '',
             price: '',
-            lat: null,
-            long: null,
+            lat: '',
+            long: '',
             image_url: '',
             info: '',
             guests: 1,
@@ -32,7 +33,7 @@ class PlaceFormStep extends React.Component {
         this.nextPage = this.nextPage.bind(this);
         this.prevPage = this.prevPage.bind(this);
         this.update = this.update.bind(this);
-        this.updateAddress = (address) => this.setState({ address });
+        this.updateAddress = (address) => this.setState({address});
 
     }
 
@@ -126,7 +127,7 @@ class PlaceFormStep extends React.Component {
                   </div>
 
                   <div style={{display: "flex", justifyContent: "center"}}>
-                      <button onClick={this.nextPage}>Next</button>
+                      <Button className="btn btn-primary" onClick={this.nextPage}>Next</Button>
                   </div>
                 </div>
           );
@@ -135,7 +136,7 @@ class PlaceFormStep extends React.Component {
         let placePicture;
         if (this.state.image_url === "") {
             placePicture =
-            <div>
+            <div style={{display: 'flex', alignItems: 'center', flexDirection: 'column'}}>
                 <Dropzone multiple={false} accept="image/*" onDrop={this.onImageDrop.bind(this)}></Dropzone>
                 <small id="fileHelp" className="form-text text-muted">*Drop an image or click to select a file to upload.*</small>
             </div>;
@@ -147,15 +148,28 @@ class PlaceFormStep extends React.Component {
 
             <div className="pageTwo">
                 <div className="search">
-                  Address: (**PRESS SUBMIT**)
-                  <PlacesAutocomplete
-                    value={this.state.address}
-                    onChange={this.updateAddress}
-                    />
+                  <div style={{display: 'flex', justifyContent: 'center'}}>
+                    <PlacesAutocomplete
+                      value={this.state.address}
+                      onChange={this.updateAddress}
+                      />
+                    <Button className="btn btn-primary btn-xs" onClick={this.handleSearch} type="submit" style={{}}>Submit</Button>
 
-                  <button onClick={this.handleSearch} type="submit">Submit</button>
-                  <p style={{fontSize: "85%"}}> (converts address to coordinates)</p>
+                  </div>
+
+                  <div style={{display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'center'}}>
+                      <div style={{fontSize: "85%"}}> (converts address to coordinates)</div>
+
+                      <br />
+                      <div style={{display: 'flex', justifyContent: 'center'}}>
+                        <input value={this.state.lat} placeholder="latitude" disabled={true} style={{width:"30%"}}></input>
+                        <input value={this.state.long} placeholder="longitude" disabled={true} style={{width:"30%"}}></input>
+                      </div>
+                  </div>
+
                 </div>
+
+                <br />
 
                 <div className="form-group">
                     <img src={this.state.image_url}/>
@@ -163,8 +177,8 @@ class PlaceFormStep extends React.Component {
                 </div>
 
                 <div style={{display: "flex", justifyContent: "space-between"}}>
-                    <button onClick={this.prevPage}>Prev</button>
-                    <button onClick={this.nextPage}>Next</button>
+                    <Button className="btn btn-danger" onClick={this.prevPage}>Prev</Button>
+                    <Button className="btn btn-primary" onClick={this.nextPage}>Next</Button>
                 </div>
             </div>
         );
@@ -186,8 +200,8 @@ class PlaceFormStep extends React.Component {
               </div>
 
               <div style={{display: "flex", justifyContent: "space-between"}}>
-                  <button onClick={this.prevPage}>Prev</button>
-                  <button type="Submit" className="btn btn-primary">Finish</button>
+                  <Button className="btn btn-danger"onClick={this.prevPage}>Prev</Button>
+                  <Button type="Submit" className="btn btn-success">Finish</Button>
               </div>
           </form>
         );
