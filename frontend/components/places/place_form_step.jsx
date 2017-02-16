@@ -201,7 +201,7 @@ class PlaceFormStep extends React.Component {
 
               <div style={{display: "flex", justifyContent: "space-between"}}>
                   <Button className="btn btn-danger"onClick={this.prevPage}>Prev</Button>
-                  <Button type="Submit" className="btn btn-success">Finish</Button>
+                  <Button type="submit" className="btn btn-success">Finish</Button>
               </div>
           </form>
         );
